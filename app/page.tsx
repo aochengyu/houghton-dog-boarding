@@ -163,15 +163,15 @@ export default function HomePage() {
       </section>
 
       {/* ── MARQUEE ─────────────────────────────────────────────── */}
-      <div className="bg-forest border-t border-cream/[0.07] py-4 overflow-hidden">
+      <div className="bg-teal py-4 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
             <span
               key={i}
-              className="inline-flex items-center gap-4 px-7 font-body text-[10px] uppercase tracking-[0.25em] text-cream/25"
+              className="inline-flex items-center gap-4 px-7 font-body text-[10px] uppercase tracking-[0.25em] text-cream/30"
             >
               {item}
-              <PawPrint size={9} className="text-terra/60 flex-shrink-0" />
+              <PawPrint size={9} className="text-rose/70 flex-shrink-0" />
             </span>
           ))}
         </div>
@@ -205,7 +205,7 @@ export default function HomePage() {
                   {/* Ghost numeral — decorative background text */}
                   <span
                     aria-hidden
-                    className="absolute -top-3 -left-1 font-display font-bold text-forest/[0.05] leading-none select-none pointer-events-none"
+                    className="absolute -top-3 -left-1 font-display font-bold text-rose/[0.35] leading-none select-none pointer-events-none"
                     style={{ fontSize: "clamp(5rem, 9vw, 7.5rem)" }}
                   >
                     0{i + 1}
@@ -362,7 +362,7 @@ export default function HomePage() {
 
             {/* Right: price card */}
             <AnimatedSection delay={140} direction="right">
-              <div className="relative rounded-3xl bg-forest overflow-hidden p-10 lg:p-14">
+              <div className="relative rounded-3xl bg-teal overflow-hidden p-10 lg:p-14">
                 {/* Paw watermark */}
                 <div aria-hidden className="absolute -right-10 -bottom-10 opacity-[0.055]">
                   <PawPrint size={210} className="text-cream" />
@@ -436,37 +436,61 @@ export default function HomePage() {
                 price: "$70 / night",
                 desc: "Overnight stays in our home — fenced yard, no kennels, limited to 1–2 dogs.",
                 href: "/services/dog-boarding",
+                accent: "terra" as const,
               },
               {
                 title: "Cat Boarding",
                 price: "$60 / night",
                 desc: "A quiet, private space in our home while you're away. Separate from dog guests.",
                 href: "/services",
+                accent: "rose" as const,
               },
               {
                 title: "Dog Walking",
                 price: "$25 / walk",
                 desc: "30-minute leashed walks through the Houghton neighborhood.",
                 href: "/services",
+                accent: "teal" as const,
               },
               {
                 title: "Drop-In Visit",
                 price: "$20 / visit",
                 desc: "We come to your home — feed, play, and check on your dog for 30 minutes.",
                 href: "/services",
+                accent: "teal" as const,
               },
             ].map((svc, i) => (
               <AnimatedSection key={svc.title} delay={i * 80}>
                 <Link
                   href={svc.href}
-                  className="group flex flex-col h-full bg-white border border-forest/[0.07] rounded-2xl p-6 hover:border-forest/20 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
+                  className={`group flex flex-col h-full bg-white border rounded-2xl p-6 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 ${
+                    svc.accent === "rose"
+                      ? "border-rose/30 hover:border-rose/50"
+                      : svc.accent === "teal"
+                      ? "border-teal/20 hover:border-teal/40"
+                      : "border-forest/[0.07] hover:border-forest/20"
+                  }`}
                 >
-                  <p className="font-display text-lg font-bold text-forest mb-1 group-hover:text-terra transition-colors duration-200">
+                  <p className={`font-display text-lg font-bold text-forest mb-1 transition-colors duration-200 ${
+                    svc.accent === "rose"
+                      ? "group-hover:text-rose"
+                      : svc.accent === "teal"
+                      ? "group-hover:text-teal"
+                      : "group-hover:text-terra"
+                  }`}>
                     {svc.title}
                   </p>
-                  <p className="font-body text-sm font-semibold text-terra mb-3">{svc.price}</p>
+                  <p className={`font-body text-sm font-semibold mb-3 ${
+                    svc.accent === "rose" ? "text-rose" : svc.accent === "teal" ? "text-teal" : "text-terra"
+                  }`}>{svc.price}</p>
                   <p className="font-body text-xs text-forest/45 leading-relaxed flex-1">{svc.desc}</p>
-                  <div className="mt-4 flex items-center gap-1 text-xs font-body text-forest/30 group-hover:text-terra/60 transition-colors">
+                  <div className={`mt-4 flex items-center gap-1 text-xs font-body text-forest/30 transition-colors ${
+                    svc.accent === "rose"
+                      ? "group-hover:text-rose/60"
+                      : svc.accent === "teal"
+                      ? "group-hover:text-teal/60"
+                      : "group-hover:text-terra/60"
+                  }`}>
                     Learn more <ArrowRight size={11} className="group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </Link>

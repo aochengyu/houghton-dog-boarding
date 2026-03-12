@@ -112,6 +112,22 @@ export default function DesignSystemPage() {
                   <Swatch bg="#a87d2e" label="dark" hex="#a87d2e" />
                 </div>
               </div>
+              <div>
+                <p className="font-body text-xs font-bold uppercase tracking-widest text-forest/40 mb-3">Teal (marquee / pricing)</p>
+                <div className="grid grid-cols-3 gap-3">
+                  <Swatch bg="#1e6b78" label="light" hex="#1e6b78" />
+                  <Swatch bg="#154D54" label="DEFAULT ★" hex="#154D54" />
+                  <Swatch bg="#0d3338" label="dark" hex="#0d3338" />
+                </div>
+              </div>
+              <div>
+                <p className="font-body text-xs font-bold uppercase tracking-widest text-forest/40 mb-3">Rose (cat / soft accent)</p>
+                <div className="grid grid-cols-3 gap-3">
+                  <Swatch bg="#d4b0b0" label="light" hex="#d4b0b0" ring />
+                  <Swatch bg="#C09292" label="DEFAULT ★" hex="#C09292" ring />
+                  <Swatch bg="#9a6e6e" label="dark" hex="#9a6e6e" />
+                </div>
+              </div>
             </div>
           </div>
         </Section>
@@ -160,6 +176,24 @@ export default function DesignSystemPage() {
                 </div>
                 <TokenRow name="border-cream/10" value="hairline — card borders" preview="rgba(250,246,240,0.10)" />
                 <TokenRow name="border-cream/15" value="light — hover state" preview="rgba(250,246,240,0.15)" />
+              </div>
+            </div>
+
+            {/* On teal */}
+            <div>
+              <div className="bg-teal rounded-xl p-1 mb-1">
+                <p className="text-center font-body text-[10px] uppercase tracking-widest text-cream/40 py-2">On teal bg</p>
+              </div>
+              <div className="rounded-xl bg-teal p-5">
+                <TokenRow name="text-cream" value="100% — headings" preview="#faf6f0" />
+                <TokenRow name="text-cream/70" value="70% — body paragraphs" preview="rgba(250,246,240,0.70)" />
+                <TokenRow name="text-cream/50" value="50% — secondary copy" preview="rgba(250,246,240,0.50)" />
+                <TokenRow name="text-cream/30" value="30% — captions" preview="rgba(250,246,240,0.30)" />
+                <TokenRow name="text-rose/70" value="rose accent text" preview="rgba(192,146,146,0.70)" />
+                <div className="pt-4 pb-1">
+                  <p className="font-body text-[10px] text-cream/25 uppercase tracking-widest mb-1">Borders</p>
+                </div>
+                <TokenRow name="border-cream/10" value="hairline borders" preview="rgba(250,246,240,0.10)" />
               </div>
             </div>
 

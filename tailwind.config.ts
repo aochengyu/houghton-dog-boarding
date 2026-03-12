@@ -15,6 +15,7 @@ const config: Config = {
           card:    '#ffffff',
           tinted:  '#f5ece0',  /* = cream-200 */
           dark:    '#1a3a2a',  /* = forest */
+          teal:    '#154D54',  /* = teal — marquee, pricing card */
           footer:  '#111e17',
           accent:  '#c4693a',  /* = terra */
         },
@@ -48,6 +49,16 @@ const config: Config = {
           light: "#e8c77a",
           DEFAULT: "#d4a853",
           dark: "#a87d2e",
+        },
+        teal: {
+          light: "#1e6b78",
+          DEFAULT: "#154D54",
+          dark: "#0d3338",
+        },
+        rose: {
+          light: "#d4b0b0",
+          DEFAULT: "#C09292",
+          dark: "#9a6e6e",
         },
       },
       fontFamily: {

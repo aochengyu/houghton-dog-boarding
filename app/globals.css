@@ -12,6 +12,8 @@
   --color-cream:  #faf6f0;
   --color-terra:  #c4693a;
   --color-gold:   #d4a853;
+  --color-teal:   #154D54;
+  --color-rose:   #C09292;
 
   /* ── Semantic color tokens ────────────────────────────────── *
    *
@@ -44,6 +46,22 @@
   --text-on-accent-body:     rgba(255,255,255,0.70);/*  70% — paragraphs */
   --text-on-accent-secondary:rgba(255,255,255,0.50);/*  50% — supporting */
   --text-on-accent-muted:    rgba(255,255,255,0.30);/*  30% — captions */
+
+  /* Text on teal surface (use text-cream + opacity) */
+  --text-on-teal:           var(--color-cream);     /* 100% — headings */
+  --text-on-teal-body:      rgba(250,246,240,0.70); /*  70% — paragraphs */
+  --text-on-teal-secondary: rgba(250,246,240,0.50); /*  50% — supporting */
+  --text-on-teal-muted:     rgba(250,246,240,0.30); /*  30% — captions */
+  --text-on-teal-faint:     rgba(250,246,240,0.20); /*  20% — subtle */
+
+  /* Borders on teal */
+  --border-on-teal:         rgba(250,246,240,0.10);
+  --border-on-teal-hover:   rgba(250,246,240,0.15);
+
+  /* Rose accent tints */
+  --rose-faint:   rgba(192,146,146,0.12);  /* ghost numerals */
+  --rose-subtle:  rgba(192,146,146,0.25);  /* soft accents */
+  --rose-soft:    rgba(192,146,146,0.45);  /* borders */
 
   /* Text on footer (#111e17) (use text-white + opacity) */
   --text-on-footer:       rgba(255,255,255,0.45);   /*  45% — links, body */
