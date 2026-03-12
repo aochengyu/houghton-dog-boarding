@@ -6,8 +6,8 @@ export const content = {
   business: {
     name: "Houghton Home Dog Boarding",
     tagline: "Where your dog feels truly at home.",
-    locationShort: "Houghton, Kirkland WA",
-    serviceArea: ["Houghton, WA", "Kirkland, WA", "Bellevue, WA", "Redmond, WA"],
+    locationShort: "Houghton neighborhood, Kirkland WA",
+    serviceArea: ["Houghton (Kirkland), WA", "Kirkland, WA", "Bellevue, WA", "Redmond, WA"],
     phone: "YOUR_GOOGLE_VOICE_NUMBER",       // e.g. "(425) 555-0100"
     email: "YOUR_GMAIL_ADDRESS",             // e.g. hello@houghtonpetcare.com
     bookingFormUrl: "YOUR_GOOGLE_FORM_URL",  // full https:// URL to your Google Form
@@ -33,7 +33,7 @@ export const content = {
   home: {
     heroHeadline: "A Real Home. Not a Kennel.",
     heroSubheadline:
-      "Your dog stays with us — in our Houghton home, on the couch, in the yard — while you travel with total peace of mind.",
+      "Your dog stays with us — in our home in the Houghton neighborhood of Kirkland, on the couch, in the yard — while you travel with total peace of mind.",
     bullets: [
       {
         icon: "Home",
@@ -118,10 +118,10 @@ export const content = {
     houghton: {
       pageTitle: "Houghton Dog Boarding | Houghton Home Dog Boarding",
       metaDescription:
-        "In-home dog boarding in Houghton, WA. $70/night. Small capacity, big hearts. Fenced yard, daily updates, vaccine-required. Serving Houghton and Kirkland.",
-      h1: "Dog Boarding in Houghton, WA",
+        "In-home dog boarding in the Houghton neighborhood of Kirkland, WA. $70/night. Small capacity, fenced yard, daily updates, vaccine-required.",
+      h1: "Dog Boarding in Houghton, Kirkland WA",
       body: [
-        "Looking for dog boarding in Houghton? We're your neighbors. Our home is located in the heart of Houghton, just minutes from Lake Washington — a calm, residential setting that's perfect for dogs who thrive in a home environment.",
+        "Looking for dog boarding in the Houghton neighborhood? We're your neighbors. Houghton is a quiet residential area within Kirkland, just minutes from Lake Washington — and it's exactly the kind of calm, home setting dogs thrive in.",
         "Unlike large boarding facilities, we accept only 1–2 dogs at a time. That means your dog gets real one-on-one attention: morning walks, backyard play sessions, and evenings curled up on the couch — not in a kennel run.",
         "We require current vaccinations (Rabies + DHPP required, Bordetella recommended) and a brief meet-and-greet before any first stay. This keeps our home safe for every pup.",
         "Prices start at $70 per night. We'll confirm availability and share our exact address after booking is confirmed.",
@@ -133,7 +133,7 @@ export const content = {
         "Home dog boarding serving Kirkland, WA. $70/night, limited spots, fenced yard. Vaccine-required, daily photos. Book now.",
       h1: "Dog Boarding in Kirkland, WA",
       body: [
-        "Searching for dog boarding in Kirkland? We're just a short drive away in neighboring Houghton — and we offer the kind of personal, home-based care that big Kirkland boarding facilities simply can't match.",
+        "Searching for dog boarding in Kirkland? We're located right in the Houghton neighborhood — one of Kirkland's most peaceful residential areas — and we offer the kind of personal, home-based care that big boarding facilities simply can't match.",
         "Kirkland dog owners love us for our small size: we limit stays to 1–2 dogs at a time, so your pup is never lost in a crowd. They play in our fully fenced backyard, nap on the couch, and wake up to a calm morning routine.",
         "We send daily photo updates so you can keep tabs on your best friend from wherever you are. No news is good news — but we know you'll want the photos anyway.",
         "Our introductory rate is $70 per night. Current vaccinations (Rabies + DHPP) are required for all stays. We're happy to answer any questions before you book.",
@@ -197,7 +197,7 @@ export const content = {
       },
       {
         q: "What areas do you serve?",
-        a: "We're based in Houghton, WA and serve the greater Kirkland area, including Bellevue and Redmond. Drop-off and pick-up happen at our home — address shared after booking is confirmed.",
+        a: "We're based in the Houghton neighborhood of Kirkland, WA, and serve the greater Eastside area including Bellevue and Redmond. Drop-off and pick-up happen at our home — address shared after booking is confirmed.",
       },
       {
         q: "What's your cancellation policy?",

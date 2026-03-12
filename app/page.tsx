@@ -23,7 +23,7 @@ export default function HomePage() {
             {/* Left: copy */}
             <div className="py-16 lg:py-24 flex flex-col justify-center">
               <p className="font-body text-xs uppercase tracking-[0.2em] text-terra font-medium mb-6">
-                Houghton · Kirkland, WA &nbsp;·&nbsp; $70/night
+                Houghton neighborhood · Kirkland, WA &nbsp;·&nbsp; $70/night
               </p>
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-cream leading-[1.02]">
                 {content.home.heroHeadline}
