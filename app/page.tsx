@@ -144,14 +144,14 @@ export default function HomePage() {
                     <div className="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0">
                       <Check size={10} className="text-white/75" strokeWidth={2.5} />
                     </div>
-                    <span className="font-body text-sm text-white/58">{item}</span>
+                    <span className="font-body text-sm text-white/60">{item}</span>
                   </div>
                 ))}
               </div>
 
               {/* Fine print */}
               <div className="relative z-10 mt-10 pt-7 border-t border-white/10">
-                <p className="font-body text-[11px] text-white/22 leading-relaxed">
+                <p className="font-body text-[11px] text-white/20 leading-relaxed">
                   Address shared after confirmation.<br />
                   Meet-and-greet required for first stays.
                 </p>
@@ -224,7 +224,7 @@ export default function HomePage() {
                     <h3 className="font-display text-xl lg:text-2xl font-bold text-forest mb-3 leading-snug">
                       {b.title}
                     </h3>
-                    <p className="font-body text-sm text-forest/48 leading-relaxed">
+                    <p className="font-body text-sm text-forest/50 leading-relaxed">
                       {b.body}
                     </p>
                   </div>
@@ -288,12 +288,12 @@ export default function HomePage() {
                     <Star key={i} size={13} fill="currentColor" className="text-gold" />
                   ))}
                 </div>
-                <div className="w-px h-4 bg-cream/12" />
+                <div className="w-px h-4 bg-cream/10" />
                 <div>
                   <p className="font-body text-sm font-semibold text-cream/65">
                     {content.home.reviews[0].author}
                   </p>
-                  <p className="font-body text-xs text-cream/28">
+                  <p className="font-body text-xs text-cream/30">
                     {content.home.reviews[0].location}
                   </p>
                 </div>
@@ -311,7 +311,7 @@ export default function HomePage() {
                       <Star key={idx} size={11} fill="currentColor" className="text-gold" />
                     ))}
                   </div>
-                  <p className="font-body text-sm text-cream/52 leading-relaxed italic mb-5">
+                  <p className="font-body text-sm text-cream/50 leading-relaxed italic mb-5">
                     &ldquo;{r.quote}&rdquo;
                   </p>
                   <p className="font-body text-xs text-cream/30 font-medium tracking-wide uppercase">
@@ -343,13 +343,13 @@ export default function HomePage() {
                 <em className="not-italic italic font-medium text-forest/35">No surprises.</em>
               </h2>
               <div className="mt-6 w-10 h-px bg-terra" />
-              <p className="mt-6 font-body text-sm text-forest/48 leading-relaxed max-w-sm">
+              <p className="mt-6 font-body text-sm text-forest/50 leading-relaxed max-w-sm">
                 $70/night, locked in for returning clients. No upsells, no extras — just honest,
                 attentive home care.
               </p>
               <ul className="mt-8 space-y-3">
                 {content.pricing.notes.map((n) => (
-                  <li key={n} className="flex items-start gap-3 text-sm font-body text-forest/42">
+                  <li key={n} className="flex items-start gap-3 text-sm font-body text-forest/40">
                     <span className="text-terra mt-0.5 flex-shrink-0">—</span>
                     {n}
                   </li>
@@ -389,7 +389,7 @@ export default function HomePage() {
                     { label: "Meet & greet", val: "Required" },
                   ].map((item) => (
                     <div key={item.label}>
-                      <p className="font-body text-[10px] uppercase tracking-widest text-cream/18 mb-1">
+                      <p className="font-body text-[10px] uppercase tracking-widest text-cream/20 mb-1">
                         {item.label}
                       </p>
                       <p className="font-body text-sm text-cream/60 font-medium">{item.val}</p>
@@ -424,7 +424,7 @@ export default function HomePage() {
                   <Link
                     key={a.href}
                     href={a.href}
-                    className="group flex items-center gap-2 border border-forest/12 rounded-xl px-5 py-3 text-sm text-forest font-body font-medium hover:bg-forest hover:text-cream hover:border-forest transition-all duration-200"
+                    className="group flex items-center gap-2 border border-forest/10 rounded-xl px-5 py-3 text-sm text-forest font-body font-medium hover:bg-forest hover:text-cream hover:border-forest transition-all duration-200"
                   >
                     {a.label} dog boarding
                     <ArrowRight
@@ -461,7 +461,7 @@ export default function HomePage() {
               >
                 {content.home.finalCtaHeadline}
               </h2>
-              <p className="mt-5 font-body text-base text-white/52 max-w-xl leading-relaxed">
+              <p className="mt-5 font-body text-base text-white/50 max-w-xl leading-relaxed">
                 {content.home.finalCtaBody}
               </p>
             </AnimatedSection>
@@ -476,7 +476,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 border border-white/18 text-white/62 font-body font-medium text-sm rounded-xl px-8 py-4 hover:border-white/38 hover:text-white hover:bg-white/5 transition-all duration-200"
+                  className="inline-flex items-center justify-center gap-2 border border-white/20 text-white/60 font-body font-medium text-sm rounded-xl px-8 py-4 hover:border-white/40 hover:text-white hover:bg-white/5 transition-all duration-200"
                 >
                   Ask a question
                 </Link>

@@ -4,7 +4,7 @@
 
 export const content = {
   business: {
-    name: "Houghton Home Dog Boarding",
+    name: "Paws and Petals",
     tagline: "Where your dog feels truly at home.",
     locationShort: "Houghton neighborhood, Kirkland WA",
     serviceArea: ["Houghton (Kirkland), WA", "Kirkland, WA", "Bellevue, WA", "Redmond, WA"],
@@ -116,7 +116,7 @@ export const content = {
 
   areas: {
     houghton: {
-      pageTitle: "Houghton Dog Boarding | Houghton Home Dog Boarding",
+      pageTitle: "Houghton Dog Boarding | Paws and Petals",
       metaDescription:
         "In-home dog boarding in the Houghton neighborhood of Kirkland, WA. $70/night. Small capacity, fenced yard, daily updates, vaccine-required.",
       h1: "Dog Boarding in Houghton, Kirkland WA",
@@ -128,7 +128,7 @@ export const content = {
       ],
     },
     kirkland: {
-      pageTitle: "Kirkland Dog Boarding | Houghton Home Dog Boarding",
+      pageTitle: "Kirkland Dog Boarding | Paws and Petals",
       metaDescription:
         "Home dog boarding serving Kirkland, WA. $70/night, limited spots, fenced yard. Vaccine-required, daily photos. Book now.",
       h1: "Dog Boarding in Kirkland, WA",
@@ -142,7 +142,7 @@ export const content = {
   },
 
   booking: {
-    pageTitle: "Request a Booking | Houghton Home Dog Boarding",
+    pageTitle: "Request a Booking | Paws and Petals",
     metaDescription: "Request a dog boarding stay in Houghton/Kirkland, WA. $70/night. Review our waiver and submit your booking request.",
     h1: "Request a Boarding Stay",
     intro: [
@@ -167,7 +167,7 @@ export const content = {
   },
 
   faq: {
-    pageTitle: "FAQ | Houghton Home Dog Boarding",
+    pageTitle: "FAQ | Paws and Petals",
     metaDescription: "Frequently asked questions about our Houghton/Kirkland dog boarding service. Vaccines, rates, policies, and more.",
     h1: "Frequently Asked Questions",
     items: [
@@ -208,7 +208,7 @@ export const content = {
 
   legal: {
     cancellation: {
-      pageTitle: "Cancellation Policy | Houghton Home Dog Boarding",
+      pageTitle: "Cancellation Policy | Paws and Petals",
       h1: "Cancellation Policy",
       bullets: [
         "Cancellations made 7+ days before the scheduled start date: full refund.",
@@ -222,15 +222,15 @@ export const content = {
       note: "To cancel or modify a reservation, please contact us by phone or email as early as possible. We're reasonable people — if something unexpected happens, reach out and we'll do our best to work with you.",
     },
     waiver: {
-      pageTitle: "Liability Waiver | Houghton Home Dog Boarding",
+      pageTitle: "Liability Waiver | Paws and Petals",
       h1: "Liability Waiver",
       paragraphs: [
         "By submitting a booking request and using our services, you (the dog owner / \"Client\") agree to the following terms.",
         "Assumption of Risk: Client acknowledges that boarding involves inherent risks, including but not limited to injury, illness, escape, or death of the pet. Client assumes full responsibility for any such risks.",
-        "Authorization for Emergency Care: Client authorizes Houghton Home Dog Boarding to seek emergency veterinary care for the pet if deemed necessary. Client agrees to reimburse all reasonable veterinary costs incurred.",
+        "Authorization for Emergency Care: Client authorizes Paws and Petals to seek emergency veterinary care for the pet if deemed necessary. Client agrees to reimburse all reasonable veterinary costs incurred.",
         "Accurate Disclosure: Client warrants that all information provided about the pet (vaccination records, temperament, medical history) is accurate and complete. Misrepresentation is grounds for immediate termination of the stay without refund.",
-        "Limitation of Liability: Houghton Home Dog Boarding shall not be held liable for injury, illness, or death of the pet except in cases of gross negligence or willful misconduct.",
-        "Indemnification: Client agrees to indemnify and hold harmless Houghton Home Dog Boarding from any claims, damages, or expenses arising from the pet's behavior during the stay, including injury to persons or property.",
+        "Limitation of Liability: Paws and Petals shall not be held liable for injury, illness, or death of the pet except in cases of gross negligence or willful misconduct.",
+        "Indemnification: Client agrees to indemnify and hold harmless Paws and Petals from any claims, damages, or expenses arising from the pet's behavior during the stay, including injury to persons or property.",
         "Vaccination Compliance: Client confirms that the pet meets all vaccination requirements (current Rabies and DHPP). Failure to provide current records may result in cancellation of the stay without refund.",
       ],
       note: "This is a simplified MVP waiver for a small home-based boarding service. It is not a substitute for legal advice. Consult an attorney to ensure this document meets your jurisdiction's requirements before relying on it commercially.",
@@ -238,8 +238,8 @@ export const content = {
   },
 
   contact: {
-    pageTitle: "Contact Us | Houghton Home Dog Boarding",
-    metaDescription: "Get in touch with Houghton Home Dog Boarding. Call, text, or email us.",
+    pageTitle: "Contact Us | Paws and Petals",
+    metaDescription: "Get in touch with Paws and Petals. Call, text, or email us.",
     h1: "Get in Touch",
     intro:
       "The best way to reach us is by text or email. We typically respond within a few hours during the day.",
