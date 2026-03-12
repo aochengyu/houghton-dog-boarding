@@ -7,7 +7,6 @@ interface DogIconProps {
 
 export function DogIcon({ size = 40, className, variant = "mono" }: DogIconProps) {
   if (variant === "mark") {
-    // Clean geometric dog face — pill ears, circle head, dot eyes, terracotta nose
     return (
       <svg
         width={size}
@@ -18,16 +17,20 @@ export function DogIcon({ size = 40, className, variant = "mono" }: DogIconProps
         aria-hidden="true"
       >
         <rect width="32" height="32" rx="8" fill="#1a3a2a" />
-        {/* Pill ears */}
-        <rect x="3.5" y="5" width="9" height="15" rx="4.5" fill="#c8b8a2" />
-        <rect x="19.5" y="5" width="9" height="15" rx="4.5" fill="#c8b8a2" />
+        {/* Ears */}
+        <rect x="3" y="4" width="10" height="16" rx="5" fill="#b89870" />
+        <rect x="19" y="4" width="10" height="16" rx="5" fill="#b89870" />
         {/* Head */}
-        <circle cx="16" cy="18" r="9.5" fill="#faf6f0" />
+        <circle cx="16" cy="18" r="11" fill="#f5deb8" />
+        {/* Muzzle */}
+        <ellipse cx="16" cy="22" rx="6.5" ry="4.5" fill="#faecd4" />
         {/* Eyes */}
-        <circle cx="12.5" cy="16.5" r="1.4" fill="#1a3a2a" />
-        <circle cx="19.5" cy="16.5" r="1.4" fill="#1a3a2a" />
+        <circle cx="12" cy="16" r="2.8" fill="#3d2c1a" />
+        <circle cx="20" cy="16" r="2.8" fill="#3d2c1a" />
+        <circle cx="12.8" cy="15.2" r="1" fill="white" opacity="0.6" />
+        <circle cx="20.8" cy="15.2" r="1" fill="white" opacity="0.6" />
         {/* Nose */}
-        <ellipse cx="16" cy="21" rx="2.5" ry="1.8" fill="#c4693a" />
+        <ellipse cx="16" cy="20.5" rx="2.2" ry="1.5" fill="#c4693a" />
       </svg>
     );
   }
