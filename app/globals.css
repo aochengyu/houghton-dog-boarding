@@ -5,12 +5,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
 
 :root {
+  /* ── Brand primitives ─────────────────────────────────────── */
   --font-display: 'Playfair Display';
   --font-body: 'DM Sans';
   --color-forest: #1a3a2a;
-  --color-cream: #faf6f0;
-  --color-terra: #c4693a;
-  --color-gold: #d4a853;
+  --color-cream:  #faf6f0;
+  --color-terra:  #c4693a;
+  --color-gold:   #d4a853;
+
+  /* ── Semantic color tokens ────────────────────────────────── *
+   *
+   *  OPACITY RULE: Only use standard Tailwind steps.
+   *  Valid: 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100
+   *  NEVER: /6 /8 /42 /48 /52 /58 etc. — they silently produce no CSS.
+   *
+   *  Surface A — cream bg   → text-forest  at opacity steps below
+   *  Surface B — forest bg  → text-cream   at opacity steps below
+   *  Surface C — terra bg   → text-white   at opacity steps below
+   *  Surface D — #111e17 bg → text-white   at opacity steps below
+   * ───────────────────────────────────────────────────────────── */
+
+  /* Text on cream/light surfaces (use text-forest + opacity) */
+  --text-primary:    var(--color-forest);           /* 100% — headings */
+  --text-body:       rgba(26, 58, 42, 0.70);        /*  70% — paragraphs */
+  --text-secondary:  rgba(26, 58, 42, 0.50);        /*  50% — supporting copy */
+  --text-muted:      rgba(26, 58, 42, 0.40);        /*  40% — meta, labels */
+  --text-faint:      rgba(26, 58, 42, 0.25);        /*  25% — captions, placeholders */
+
+  /* Text on forest/dark surfaces (use text-cream + opacity) */
+  --text-on-dark:           var(--color-cream);     /* 100% — headings */
+  --text-on-dark-body:      rgba(250,246,240,0.70); /*  70% — paragraphs */
+  --text-on-dark-secondary: rgba(250,246,240,0.50); /*  50% — supporting copy */
+  --text-on-dark-muted:     rgba(250,246,240,0.30); /*  30% — meta, attribution */
+  --text-on-dark-faint:     rgba(250,246,240,0.20); /*  20% — subtle decorative */
+
+  /* Text on terra/accent surfaces (use text-white + opacity) */
+  --text-on-accent:          #ffffff;               /* 100% — headings */
+  --text-on-accent-body:     rgba(255,255,255,0.70);/*  70% — paragraphs */
+  --text-on-accent-secondary:rgba(255,255,255,0.50);/*  50% — supporting */
+  --text-on-accent-muted:    rgba(255,255,255,0.30);/*  30% — captions */
+
+  /* Text on footer (#111e17) (use text-white + opacity) */
+  --text-on-footer:       rgba(255,255,255,0.45);   /*  45% — links, body */
+  --text-on-footer-muted: rgba(255,255,255,0.20);   /*  20% — copyright */
+  --text-on-footer-faint: rgba(255,255,255,0.15);   /*  15% — service area */
+
+  /* Borders */
+  --border-hairline:       rgba(26, 58, 42, 0.05);  /* cards on cream */
+  --border-light:          rgba(26, 58, 42, 0.10);  /* panels on cream */
+  --border-medium:         rgba(26, 58, 42, 0.20);  /* visible dividers */
+  --border-on-dark:        rgba(250,246,240,0.10);  /* cards on forest */
+  --border-on-dark-hover:  rgba(250,246,240,0.15);  /* hover state on forest */
+  --border-on-footer:      rgba(255,255,255,0.05);  /* footer divider */
+
+  /* Accent tints */
+  --terra-faint:  rgba(196,105,58,0.10);  /* badge bg */
+  --terra-subtle: rgba(196,105,58,0.20);  /* dividers */
+  --terra-soft:   rgba(196,105,58,0.40);  /* decorative rules */
+  --gold-faint:   rgba(212,168,83,0.10);  /* notice bg */
+  --gold-border:  rgba(212,168,83,0.30);  /* notice border */
 }
 
 html {
@@ -206,4 +259,60 @@ body::before {
 .hover-underline:hover::after {
   left: 0;
   right: 0;
+}
+
+/* ============================================================
+   Semantic utility classes — DS (design system)
+   Use these instead of raw opacity values to maintain consistency.
+
+   On cream bg → ds-text-*
+   On forest bg → ds-text-dark-*
+   On terra bg → ds-text-accent-*
+   ============================================================ */
+
+/* Text on cream/light surfaces */
+.ds-text-body      { color: var(--text-body); }
+.ds-text-secondary { color: var(--text-secondary); }
+.ds-text-muted     { color: var(--text-muted); }
+.ds-text-faint     { color: var(--text-faint); }
+
+/* Text on forest/dark surfaces */
+.ds-text-dark-body      { color: var(--text-on-dark-body); }
+.ds-text-dark-secondary { color: var(--text-on-dark-secondary); }
+.ds-text-dark-muted     { color: var(--text-on-dark-muted); }
+.ds-text-dark-faint     { color: var(--text-on-dark-faint); }
+
+/* Text on terra/accent surface */
+.ds-text-accent-body      { color: var(--text-on-accent-body); }
+.ds-text-accent-secondary { color: var(--text-on-accent-secondary); }
+.ds-text-accent-muted     { color: var(--text-on-accent-muted); }
+
+/* Section label eyebrow (10px uppercase tracked, terra shimmer) */
+.ds-label {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-terra);
+}
+
+/* Card surfaces */
+.ds-card {
+  background: #ffffff;
+  border: 1px solid var(--border-hairline);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.ds-card-tinted {
+  background: #f5ece0;
+  border: 1px solid var(--border-hairline);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.ds-card-dark {
+  background: var(--color-forest);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  overflow: hidden;
 }

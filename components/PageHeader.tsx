@@ -20,7 +20,7 @@ export function PageHeader({ h1, subtitle, label, className }: PageHeaderProps) 
           {h1}
         </h1>
         {subtitle && (
-          <p className="mt-4 text-base text-forest/55 max-w-xl font-body leading-relaxed">
+          <p className="mt-4 text-base text-forest/50 max-w-xl font-body leading-relaxed">
             {subtitle}
           </p>
         )}

@@ -9,6 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        /* ── Semantic surface aliases ──────────────────────── */
+        surface: {
+          page:    '#faf6f0',  /* = cream */
+          card:    '#ffffff',
+          tinted:  '#f5ece0',  /* = cream-200 */
+          dark:    '#1a3a2a',  /* = forest */
+          footer:  '#111e17',
+          accent:  '#c4693a',  /* = terra */
+        },
+        /* ── Brand primitives ─────────────────────────────── */
         forest: {
           50:  "#f0f5f2",
           100: "#d6e8dc",
@@ -93,9 +103,13 @@ const config: Config = {
         },
       },
       boxShadow: {
-        'card': '0 2px 8px rgba(26,58,42,0.06), 0 1px 2px rgba(26,58,42,0.04)',
-        'card-hover': '0 12px 40px rgba(26,58,42,0.12), 0 4px 12px rgba(26,58,42,0.08)',
-        'glow': '0 0 40px rgba(196,105,58,0.15)',
+        'card':        '0 2px 8px rgba(26,58,42,0.06), 0 1px 2px rgba(26,58,42,0.04)',
+        'card-hover':  '0 12px 40px rgba(26,58,42,0.12), 0 4px 12px rgba(26,58,42,0.08)',
+        'glow':        '0 0 40px rgba(196,105,58,0.15)',
+        'glow-terra':  '0 0 40px rgba(196,105,58,0.25)',
+        'glow-gold':   '0 0 32px rgba(212,168,83,0.20)',
+        'button':      '0 1px 2px rgba(26,58,42,0.12)',
+        'button-hover':'0 4px 16px rgba(196,105,58,0.35)',
       },
     },
   },

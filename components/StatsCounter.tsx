@@ -121,7 +121,7 @@ export function StatsCounter({ items }: StatsCounterProps) {
   }, []);
 
   return (
-    <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-forest/8">
+    <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-forest/10">
       {items.map((item) => (
         <AnimatedStat key={item.label} num={item.num} label={item.label} visible={visible} />
       ))}

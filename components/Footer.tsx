@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8">
 
         {/* Top row */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 pb-10 border-b border-white/6">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 pb-10 border-b border-white/5">
           <div>
             <p className="font-display text-xl text-cream font-semibold leading-tight">
               {content.business.name}
@@ -36,7 +36,7 @@ export function Footer() {
             {[
               { href: "/booking", label: "Book a Stay" },
               { href: "/faq", label: "FAQ" },
-              { href: "/services/dog-boarding", label: "Services" },
+              { href: "/services", label: "Services" },
               { href: "/contact", label: "Contact" },
               { href: "/legal/cancellation", label: "Cancellation Policy" },
               { href: "/legal/liability-waiver", label: "Liability Waiver" },
