@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   },
   description:
     "Home-based dog boarding in Houghton/Kirkland, WA. $70/night. Small capacity, fenced yard, daily photos. No kennels — just a real home.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     type: "website",
     siteName: content.business.name,
