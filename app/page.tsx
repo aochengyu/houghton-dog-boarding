@@ -3,7 +3,7 @@ import Link from "next/link";
 import { content } from "@/content";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CTAButton } from "@/components/CTAButton";
-import { DogIcon } from "@/components/DogIcon";
+import { PawPrint } from "@/components/PawPrint";
 import { Star, ArrowUpRight, Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -53,11 +53,14 @@ export default function HomePage() {
 
             {/* Right: info panel — solid terracotta block */}
             <div className="hidden lg:flex flex-col justify-center bg-terra px-10 py-12 relative overflow-hidden">
-              {/* Decorative monoline dog icon — large, ghosted */}
-              <div className="absolute -bottom-6 -right-6 text-white/10 pointer-events-none select-none">
-                <DogIcon variant="mono" size={180} />
-              </div>
-
+              {/* Subtle repeating paw pattern */}
+              <div
+                className="absolute inset-0 opacity-[0.07] pointer-events-none"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='22.5' rx='6.5' ry='5' fill='white'/%3E%3Ccircle cx='7.5' cy='14.5' r='2.8' fill='white'/%3E%3Ccircle cx='12.5' cy='11' r='3' fill='white'/%3E%3Ccircle cx='19.5' cy='11' r='3' fill='white'/%3E%3Ccircle cx='24.5' cy='14.5' r='2.8' fill='white'/%3E%3C/svg%3E")`,
+                  backgroundSize: "48px 48px",
+                }}
+              />
               <p className="font-body text-xs uppercase tracking-[0.15em] text-white/50 mb-6">Introductory rate</p>
               <p className="font-display text-7xl font-bold text-white leading-none">
                 $70
@@ -155,9 +158,12 @@ export default function HomePage() {
 
             {/* Featured quote */}
             <AnimatedSection>
-              <p className="font-body text-xs uppercase tracking-[0.15em] text-terra font-medium mb-8">
-                {content.home.socialProofTitle}
-              </p>
+              <div className="flex items-center gap-2 mb-8">
+                <PawPrint size={14} className="text-terra opacity-70" />
+                <p className="font-body text-xs uppercase tracking-[0.15em] text-terra font-medium">
+                  {content.home.socialProofTitle}
+                </p>
+              </div>
               <blockquote className="font-display text-2xl lg:text-3xl font-medium text-cream leading-[1.35] italic">
                 &ldquo;{content.home.reviews[0].quote}&rdquo;
               </blockquote>
@@ -277,7 +283,14 @@ export default function HomePage() {
       </section>
 
       {/* ── FINAL CTA ────────────────────────────────────────── */}
-      <section className="py-20 lg:py-28 bg-terra">
+      <section className="py-20 lg:py-28 bg-terra relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='22.5' rx='6.5' ry='5' fill='white'/%3E%3Ccircle cx='7.5' cy='14.5' r='2.8' fill='white'/%3E%3Ccircle cx='12.5' cy='11' r='3' fill='white'/%3E%3Ccircle cx='19.5' cy='11' r='3' fill='white'/%3E%3Ccircle cx='24.5' cy='14.5' r='2.8' fill='white'/%3E%3C/svg%3E")`,
+            backgroundSize: "64px 64px",
+          }}
+        />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-center">
             <div>
