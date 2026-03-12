@@ -1,18 +1,13 @@
 interface DogIconProps {
   size?: number;
   className?: string;
-  /** "mono" = stroke-only line art; "mark" = solid favicon-style mark */
+  /** "mono" = stroke-only line art of a sitting dog; "mark" = solid badge mark */
   variant?: "mono" | "mark";
 }
 
-/**
- * Artistic dog icon.
- *
- * mono  — monoline stroke art, scales beautifully at 32px+, transparent bg
- * mark  — solid filled mark on a forest green tile, like the favicon
- */
 export function DogIcon({ size = 40, className, variant = "mono" }: DogIconProps) {
   if (variant === "mark") {
+    // Clean geometric dog face — pill ears, circle head, dot eyes, terracotta nose
     return (
       <svg
         width={size}
@@ -22,20 +17,22 @@ export function DogIcon({ size = 40, className, variant = "mono" }: DogIconProps
         className={className}
         aria-hidden="true"
       >
-        <rect width="32" height="32" rx="7" fill="#1a3a2a" />
-        <ellipse cx="10" cy="11.5" rx="4.5" ry="6" fill="#f0e8dc" transform="rotate(-15 10 11.5)" />
-        <ellipse cx="22" cy="11.5" rx="4.5" ry="6" fill="#f0e8dc" transform="rotate(15 22 11.5)" />
-        <ellipse cx="16" cy="19.5" rx="9" ry="8.5" fill="#faf6f0" />
-        <circle cx="12.8" cy="17.5" r="1.4" fill="#1a3a2a" />
-        <circle cx="19.2" cy="17.5" r="1.4" fill="#1a3a2a" />
-        <circle cx="13.3" cy="17" r="0.4" fill="white" />
-        <circle cx="19.7" cy="17" r="0.4" fill="white" />
-        <ellipse cx="16" cy="22" rx="3" ry="2.2" fill="#c4693a" />
+        <rect width="32" height="32" rx="8" fill="#1a3a2a" />
+        {/* Pill ears */}
+        <rect x="3.5" y="5" width="9" height="15" rx="4.5" fill="#c8b8a2" />
+        <rect x="19.5" y="5" width="9" height="15" rx="4.5" fill="#c8b8a2" />
+        {/* Head */}
+        <circle cx="16" cy="18" r="9.5" fill="#faf6f0" />
+        {/* Eyes */}
+        <circle cx="12.5" cy="16.5" r="1.4" fill="#1a3a2a" />
+        <circle cx="19.5" cy="16.5" r="1.4" fill="#1a3a2a" />
+        {/* Nose */}
+        <ellipse cx="16" cy="21" rx="2.5" ry="1.8" fill="#c4693a" />
       </svg>
     );
   }
 
-  // Monoline stroke variant — single continuous-weight strokes, artistic
+  // Mono: stroke-only full sitting dog — elegant line art for large decorative use
   return (
     <svg
       width={size}
@@ -48,58 +45,61 @@ export function DogIcon({ size = 40, className, variant = "mono" }: DogIconProps
     >
       {/* Left floppy ear */}
       <path
-        d="M21 25 Q12 20 13 35 Q14 44 22 43"
+        d="M24 15 C15 11 13 25 16 32 C17 36 22 37 26 34"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-
       {/* Right floppy ear */}
       <path
-        d="M43 25 Q52 20 51 35 Q50 44 42 43"
+        d="M40 15 C49 11 51 25 48 32 C47 36 42 37 38 34"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-
-      {/* Head — main oval */}
-      <ellipse
-        cx="32"
-        cy="38"
-        rx="15"
-        ry="14"
+      {/* Head */}
+      <circle cx="32" cy="20" r="12" stroke="currentColor" strokeWidth="2" />
+      {/* Eyes */}
+      <circle cx="28" cy="18" r="1.8" fill="currentColor" />
+      <circle cx="36" cy="18" r="1.8" fill="currentColor" />
+      {/* Nose — sole terracotta accent */}
+      <ellipse cx="32" cy="23.5" rx="3.5" ry="2.5" fill="#c4693a" />
+      {/* Neck */}
+      <path
+        d="M25 30 C23 35 22 38 22 42"
         stroke="currentColor"
         strokeWidth="2"
-      />
-
-      {/* Snout area — subtle raised muzzle */}
-      <path
-        d="M25 43 Q32 48 39 43"
-        stroke="currentColor"
-        strokeWidth="1.5"
         strokeLinecap="round"
-        fill="none"
       />
-
-      {/* Left eye */}
-      <circle cx="27" cy="35" r="2" fill="currentColor" />
-
-      {/* Right eye */}
-      <circle cx="37" cy="35" r="2" fill="currentColor" />
-
-      {/* Nose — the one terracotta accent */}
-      <ellipse cx="32" cy="41" rx="4" ry="3" fill="#c4693a" />
-
-      {/* Tiny mouth */}
       <path
-        d="M29.5 44.5 Q32 46.5 34.5 44.5"
+        d="M39 30 C41 35 42 38 42 42"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="2"
         strokeLinecap="round"
-        fill="none"
-        opacity="0.5"
+      />
+      {/* Body */}
+      <ellipse cx="32" cy="48" rx="12" ry="10" stroke="currentColor" strokeWidth="2" />
+      {/* Front paws */}
+      <path
+        d="M26 56 C25 59 24 61 24 63"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M38 56 C39 59 40 61 40 63"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      {/* Tail — curving up from right side of body */}
+      <path
+        d="M44 44 C50 40 54 34 50 30"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
