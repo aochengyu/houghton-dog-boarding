@@ -8,6 +8,7 @@ const legal = content.legal.waiver;
 
 export const metadata: Metadata = {
   title: legal.pageTitle,
+  description: "Liability waiver for Houghton Home Dog Boarding in Kirkland, WA. Required reading before submitting a booking request.",
 };
 
 export default function LiabilityWaiverPage() {

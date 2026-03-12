@@ -25,12 +25,16 @@ export function BookingClient() {
         </Link>
       </p>
 
-      <label className="flex items-start gap-3 cursor-pointer group mb-8">
-        <button
-          role="checkbox"
-          aria-checked={agreed}
-          onClick={() => setAgreed(!agreed)}
-          className={`mt-0.5 w-6 h-6 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest ${
+      <label htmlFor="waiver-agree" className="flex items-start gap-3 cursor-pointer group mb-8">
+        <input
+          type="checkbox"
+          id="waiver-agree"
+          checked={agreed}
+          onChange={(e) => setAgreed(e.target.checked)}
+          className="sr-only"
+        />
+        <div
+          className={`mt-0.5 w-6 h-6 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-all ${
             agreed
               ? "bg-forest border-forest"
               : "border-forest/30 bg-white group-hover:border-forest"
@@ -44,7 +48,7 @@ export function BookingClient() {
               style={{ animation: 'scaleIn 0.2s ease forwards' }}
             />
           )}
-        </button>
+        </div>
         <span className="font-body text-forest text-sm leading-relaxed">
           {bk.waiverCheckboxLabel}
         </span>

@@ -8,6 +8,7 @@ const legal = content.legal.cancellation;
 
 export const metadata: Metadata = {
   title: legal.pageTitle,
+  description: "Our cancellation policy for dog boarding stays in Kirkland, WA. Review refund timelines before booking.",
 };
 
 export default function CancellationPage() {

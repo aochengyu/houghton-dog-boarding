@@ -4,6 +4,7 @@ import { content } from "@/content";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CTAButton } from "@/components/CTAButton";
 import { PawPrint } from "@/components/PawPrint";
+import { StatsCounter } from "@/components/StatsCounter";
 import { Star, ArrowUpRight, Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -22,16 +23,16 @@ export default function HomePage() {
 
             {/* Left: copy */}
             <div className="py-16 lg:py-24 flex flex-col justify-center">
-              <p className="font-body text-xs uppercase tracking-[0.2em] text-terra font-medium mb-6">
+              <p className="font-body text-xs uppercase tracking-[0.2em] text-terra font-medium mb-6 opacity-0 animate-fade-up [animation-delay:0ms] [animation-fill-mode:forwards]">
                 Houghton neighborhood · Kirkland, WA &nbsp;·&nbsp; $70/night
               </p>
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-cream leading-[1.02]">
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-cream leading-[1.02] opacity-0 animate-fade-up [animation-delay:80ms] [animation-fill-mode:forwards]">
                 {content.home.heroHeadline}
               </h1>
-              <p className="mt-6 text-base lg:text-lg text-cream/55 font-body leading-relaxed max-w-md">
+              <p className="mt-6 text-base lg:text-lg text-cream/55 font-body leading-relaxed max-w-md opacity-0 animate-fade-up [animation-delay:180ms] [animation-fill-mode:forwards]">
                 {content.home.heroSubheadline}
               </p>
-              <div className="mt-10 flex items-center gap-4">
+              <div className="mt-10 flex items-center gap-4 opacity-0 animate-fade-up [animation-delay:260ms] [animation-fill-mode:forwards]">
                 <CTAButton href="/booking" label={content.ctas.primary} size="lg" />
                 <Link
                   href="/services/dog-boarding"
@@ -41,7 +42,7 @@ export default function HomePage() {
                   <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
-              <div className="mt-10 flex items-center gap-2.5">
+              <div className="mt-10 flex items-center gap-2.5 opacity-0 animate-fade-up [animation-delay:340ms] [animation-fill-mode:forwards]">
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={13} fill="currentColor" className="text-gold" />
@@ -52,7 +53,7 @@ export default function HomePage() {
             </div>
 
             {/* Right: info panel — solid terracotta block */}
-            <div className="hidden lg:flex flex-col justify-center bg-terra px-10 py-12 relative overflow-hidden">
+            <div className="hidden lg:flex flex-col justify-center bg-terra px-10 py-12 relative overflow-hidden opacity-0 animate-[fadeInRight_0.7s_ease_0.2s_forwards]">
               {/* Subtle repeating paw pattern */}
               <div
                 className="absolute inset-0 opacity-[0.07] pointer-events-none"
@@ -95,19 +96,12 @@ export default function HomePage() {
       {/* ── STATS BAR ────────────────────────────────────────── */}
       <div className="border-b border-forest/8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-forest/8">
-            {[
-              { num: "$70", label: "Per night" },
-              { num: "1–2", label: "Dogs max" },
-              { num: "<24h", label: "Response time" },
-              { num: "100%", label: "Home-based" },
-            ].map((stat) => (
-              <div key={stat.label} className="py-6 px-6 lg:px-10 first:pl-0 last:pr-0">
-                <p className="font-display text-2xl lg:text-3xl font-bold text-forest">{stat.num}</p>
-                <p className="font-body text-xs text-forest/40 mt-0.5 uppercase tracking-widest">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+          <StatsCounter items={[
+            { num: "$70", label: "Per night" },
+            { num: "1–2", label: "Dogs max" },
+            { num: "<24h", label: "Response time" },
+            { num: "100%", label: "Home-based" },
+          ]} />
         </div>
       </div>
 
@@ -118,7 +112,7 @@ export default function HomePage() {
 
             {/* Sticky label column */}
             <div className="lg:sticky lg:top-28">
-              <p className="font-body text-xs uppercase tracking-[0.15em] text-terra font-medium mb-4">
+              <p className="font-body text-xs uppercase tracking-[0.15em] text-terra font-medium mb-4 label-accent">
                 Why families choose us
               </p>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-forest leading-[1.1]">
@@ -134,7 +128,7 @@ export default function HomePage() {
             <div className="grid sm:grid-cols-1 gap-4">
               {content.home.bullets.map((b, i) => (
                 <AnimatedSection key={b.title} delay={i * 80}>
-                  <div className="flex gap-6 p-6 bg-white border border-forest/8 rounded-xl hover:border-forest/20 hover:shadow-[0_4px_20px_rgba(26,58,42,0.07)] transition-all duration-300 group">
+                  <div className="flex gap-6 p-6 bg-white border border-forest/8 rounded-xl hover:border-forest/20 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group">
                     <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-terra/8 flex items-center justify-center group-hover:bg-terra/15 transition-colors duration-300">
                       <span className="font-display text-lg font-bold text-terra/50 group-hover:text-terra/70 transition-colors">{i + 1}</span>
                     </div>
@@ -160,7 +154,7 @@ export default function HomePage() {
             <AnimatedSection>
               <div className="flex items-center gap-2 mb-8">
                 <PawPrint size={14} className="text-terra opacity-70" />
-                <p className="font-body text-xs uppercase tracking-[0.15em] text-terra font-medium">
+                <p className="font-body text-xs uppercase tracking-[0.15em] text-terra font-medium label-accent">
                   {content.home.socialProofTitle}
                 </p>
               </div>
@@ -208,7 +202,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
-              <p className="font-body text-xs uppercase tracking-[0.15em] text-terra font-medium mb-4">Pricing</p>
+              <p className="font-body text-xs uppercase tracking-[0.15em] text-terra font-medium mb-4 label-accent">Pricing</p>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-forest leading-[1.1]">
                 Transparent,<br />simple pricing.
               </h2>
