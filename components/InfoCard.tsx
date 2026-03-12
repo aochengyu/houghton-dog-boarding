@@ -6,31 +6,33 @@ interface InfoCardProps {
   icon?: keyof typeof Icons;
   title: string;
   body: string;
+  number?: string;
   className?: string;
 }
 
-export function InfoCard({ icon, title, body, className }: InfoCardProps) {
+export function InfoCard({ icon, title, body, number, className }: InfoCardProps) {
   const IconComponent = icon ? (Icons[icon] as React.ComponentType<LucideProps>) : null;
 
   return (
     <div
       className={cn(
-        "group bg-white rounded-3xl p-8 shadow-card border border-forest/5",
-        "hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300",
-        "relative overflow-hidden",
+        "group bg-white border border-forest/8 rounded-xl p-7",
+        "hover:border-forest/20 hover:shadow-[0_8px_30px_rgba(26,58,42,0.08)] transition-all duration-300",
         className
       )}
     >
-      {/* Left border accent that appears on hover */}
-      <div className="absolute left-0 top-0 bottom-0 w-0 group-hover:w-1 bg-terra transition-all duration-300 rounded-l-3xl" />
-
-      {IconComponent && (
-        <div className="w-12 h-12 bg-cream-200 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-terra transition-all duration-300">
-          <IconComponent size={22} className="text-terra group-hover:text-white transition-colors duration-300" />
+      {number && (
+        <span className="font-display text-4xl font-bold text-forest/10 block mb-4 leading-none group-hover:text-terra/20 transition-colors duration-300">
+          {number}
+        </span>
+      )}
+      {!number && IconComponent && (
+        <div className="w-10 h-10 rounded-lg bg-terra/8 flex items-center justify-center mb-5 group-hover:bg-terra/15 transition-colors duration-300">
+          <IconComponent size={18} className="text-terra" />
         </div>
       )}
-      <h3 className="font-display text-xl font-semibold text-forest mb-2">{title}</h3>
-      <p className="font-body text-forest/60 leading-relaxed">{body}</p>
+      <h3 className="font-display text-lg font-semibold text-forest mb-2 leading-snug">{title}</h3>
+      <p className="font-body text-sm text-forest/55 leading-relaxed">{body}</p>
     </div>
   );
 }
