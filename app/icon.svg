@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Forest green background with rounded corners -->
+  <rect width="32" height="32" rx="7" fill="#1a3a2a"/>
+
+  <!-- Left floppy ear (solid, behind head) -->
+  <ellipse cx="10" cy="11.5" rx="4.5" ry="6" fill="#f0e8dc" transform="rotate(-15 10 11.5)"/>
+
+  <!-- Right floppy ear (solid, behind head) -->
+  <ellipse cx="22" cy="11.5" rx="4.5" ry="6" fill="#f0e8dc" transform="rotate(15 22 11.5)"/>
+
+  <!-- Head -->
+  <ellipse cx="16" cy="19.5" rx="9" ry="8.5" fill="#faf6f0"/>
+
+  <!-- Eyes -->
+  <circle cx="12.8" cy="17.5" r="1.4" fill="#1a3a2a"/>
+  <circle cx="19.2" cy="17.5" r="1.4" fill="#1a3a2a"/>
+
+  <!-- Eye shine -->
+  <circle cx="13.3" cy="17" r="0.4" fill="white"/>
+  <circle cx="19.7" cy="17" r="0.4" fill="white"/>
+
+  <!-- Nose -->
+  <ellipse cx="16" cy="22" rx="3" ry="2.2" fill="#c4693a"/>
+</svg>

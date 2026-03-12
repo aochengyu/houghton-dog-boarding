@@ -3,6 +3,7 @@ import Link from "next/link";
 import { content } from "@/content";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CTAButton } from "@/components/CTAButton";
+import { DogIcon } from "@/components/DogIcon";
 import { Star, ArrowUpRight, Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -51,7 +52,12 @@ export default function HomePage() {
             </div>
 
             {/* Right: info panel — solid terracotta block */}
-            <div className="hidden lg:flex flex-col justify-center bg-terra px-10 py-12">
+            <div className="hidden lg:flex flex-col justify-center bg-terra px-10 py-12 relative overflow-hidden">
+              {/* Decorative monoline dog icon — large, ghosted */}
+              <div className="absolute -bottom-6 -right-6 text-white/10 pointer-events-none select-none">
+                <DogIcon variant="mono" size={180} />
+              </div>
+
               <p className="font-body text-xs uppercase tracking-[0.15em] text-white/50 mb-6">Introductory rate</p>
               <p className="font-display text-7xl font-bold text-white leading-none">
                 $70

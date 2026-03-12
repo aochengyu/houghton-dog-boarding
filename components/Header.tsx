@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { content } from "@/content";
 import { CTAButton } from "./CTAButton";
+import { DogIcon } from "./DogIcon";
 import { Menu, X, Phone, Mail } from "lucide-react";
 
 export function Header() {
@@ -31,14 +32,17 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex flex-col leading-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest rounded group"
+            className="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest rounded group"
           >
-            <span className="font-display text-lg lg:text-xl font-semibold text-forest transition-colors duration-200 group-hover:text-terra">
-              {content.business.name}
-            </span>
-            <span className="text-xs text-forest/60 font-body hidden sm:block transition-colors duration-200 group-hover:text-forest/80">
-              {content.business.locationShort}
-            </span>
+            <DogIcon variant="mark" size={32} className="flex-shrink-0 group-hover:opacity-80 transition-opacity" />
+            <div className="flex flex-col leading-tight">
+              <span className="font-display text-lg lg:text-xl font-semibold text-forest transition-colors duration-200 group-hover:text-terra">
+                {content.business.name}
+              </span>
+              <span className="text-xs text-forest/60 font-body hidden sm:block">
+                {content.business.locationShort}
+              </span>
+            </div>
           </Link>
 
           {/* Desktop nav */}
