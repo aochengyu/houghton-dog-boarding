@@ -83,6 +83,7 @@ export const content = {
       shortDesc:
         "Overnight dog boarding in a real Houghton home. No cages, no kennels — just warm laps, a fenced yard, and plenty of love.",
       priceLine: "$70 / night (introductory rate)",
+      icon: "Home",
       included: [
         "All meals (you provide food to keep their diet consistent)",
         "Multiple outdoor play sessions per day in our fully fenced yard",
@@ -110,6 +111,66 @@ export const content = {
         "Highly reactive or dog-aggressive dogs",
         "Very large or giant breeds (case by case — ask)",
         "Dogs requiring injectable medication or complex medical care",
+      ],
+    },
+    catBoarding: {
+      title: "Home Cat Boarding",
+      shortDesc:
+        "Your cat stays in our home in a calm, private space — away from dogs and the stress of a boarding facility.",
+      priceLine: "$60 / night",
+      icon: "Cat",
+      included: [
+        "Private, quiet space separated from any dog guests",
+        "All meals (you provide food for dietary consistency)",
+        "Fresh water and clean litter box daily",
+        "Playtime and affection on their schedule",
+        "Daily photo/text updates to you",
+        "Basic medication administration (pills)",
+      ],
+      requirements: [
+        "Up-to-date Rabies vaccination (required)",
+        "Up-to-date FVRCP vaccination (required)",
+        "Cat must be comfortable with calm home environments",
+        "No history of aggression toward people",
+      ],
+    },
+    dogWalking: {
+      title: "Dog Walking",
+      shortDesc:
+        "30-minute leashed walks in the Houghton neighborhood. Perfect for keeping your dog active and mentally stimulated on busy days.",
+      priceLine: "$25 / walk",
+      icon: "Footprints",
+      included: [
+        "30-minute leashed neighborhood walk",
+        "Pick-up and drop-off at your door",
+        "Fresh water after the walk",
+        "Photo update sent to you",
+        "Treats included (or we use yours)",
+      ],
+      requirements: [
+        "Dog must be leash-friendly and non-reactive",
+        "Must be current on Rabies vaccination",
+        "Service area: Houghton neighborhood, Kirkland",
+      ],
+    },
+    dropIn: {
+      title: "Dog Drop-In Visit",
+      shortDesc:
+        "We come to your home to feed, play, and check on your dog. Great for dogs who are happiest in their own space.",
+      priceLine: "$20 / visit",
+      icon: "Clock",
+      included: [
+        "30-minute visit at your home",
+        "Feeding and fresh water",
+        "Playtime and affection",
+        "Quick potty break in your yard or on leash",
+        "Photo update sent to you",
+        "Basic medication administration (pills)",
+      ],
+      requirements: [
+        "Must be current on Rabies vaccination",
+        "Dog must be comfortable with familiar visitors",
+        "Service area: Houghton neighborhood, Kirkland",
       ],
     },
   },

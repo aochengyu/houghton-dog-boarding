@@ -4,7 +4,7 @@ import { content } from "@/content";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CTAButton } from "@/components/CTAButton";
 import { PawPrint } from "@/components/PawPrint";
-import { Star, ArrowRight, Check } from "lucide-react";
+import { Star, ArrowRight, Check, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: content.business.name,
@@ -403,37 +403,99 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── AREA LINKS ──────────────────────────────────────────── */}
-      <div className="border-t border-forest/[0.07]">
-        <AnimatedSection>
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+      {/* ── SERVICES ────────────────────────────────────────────── */}
+      <section className="py-24 lg:py-32 bg-cream border-t border-forest/[0.07]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
               <div>
-                <p className="font-body text-[10px] uppercase tracking-[0.25em] text-terra font-medium mb-2">
-                  Service areas
+                <p className="font-body text-[10px] uppercase tracking-[0.25em] text-terra font-medium mb-4 label-accent">
+                  What we offer
                 </p>
-                <h2 className="font-display text-2xl lg:text-3xl font-bold text-forest">
-                  Serving the Eastside
+                <h2
+                  className="font-display font-bold text-forest leading-[1.0]"
+                  style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
+                >
+                  Four ways to help.
                 </h2>
               </div>
-              <div className="flex gap-3 flex-wrap">
-                {[
-                  { label: "Houghton", href: "/areas/houghton-dog-boarding" },
-                  { label: "Kirkland", href: "/areas/kirkland-dog-boarding" },
-                ].map((a) => (
-                  <Link
-                    key={a.href}
-                    href={a.href}
-                    className="group flex items-center gap-2 border border-forest/10 rounded-xl px-5 py-3 text-sm text-forest font-body font-medium hover:bg-forest hover:text-cream hover:border-forest transition-all duration-200"
-                  >
-                    {a.label} dog boarding
-                    <ArrowRight
-                      size={13}
-                      className="text-forest/25 group-hover:text-cream/55 group-hover:translate-x-0.5 transition-all duration-200"
-                    />
-                  </Link>
-                ))}
+              <Link
+                href="/services"
+                className="group flex items-center gap-1.5 text-sm font-body text-forest/40 hover:text-forest/70 transition-colors flex-shrink-0"
+              >
+                View all services
+                <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
+              </Link>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                title: "Dog Boarding",
+                price: "$70 / night",
+                desc: "Overnight stays in our home — fenced yard, no kennels, limited to 1–2 dogs.",
+                href: "/services/dog-boarding",
+              },
+              {
+                title: "Cat Boarding",
+                price: "$60 / night",
+                desc: "A quiet, private space in our home while you're away. Separate from dog guests.",
+                href: "/services",
+              },
+              {
+                title: "Dog Walking",
+                price: "$25 / walk",
+                desc: "30-minute leashed walks through the Houghton neighborhood.",
+                href: "/services",
+              },
+              {
+                title: "Drop-In Visit",
+                price: "$20 / visit",
+                desc: "We come to your home — feed, play, and check on your dog for 30 minutes.",
+                href: "/services",
+              },
+            ].map((svc, i) => (
+              <AnimatedSection key={svc.title} delay={i * 80}>
+                <Link
+                  href={svc.href}
+                  className="group flex flex-col h-full bg-white border border-forest/[0.07] rounded-2xl p-6 hover:border-forest/20 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
+                >
+                  <p className="font-display text-lg font-bold text-forest mb-1 group-hover:text-terra transition-colors duration-200">
+                    {svc.title}
+                  </p>
+                  <p className="font-body text-sm font-semibold text-terra mb-3">{svc.price}</p>
+                  <p className="font-body text-xs text-forest/45 leading-relaxed flex-1">{svc.desc}</p>
+                  <div className="mt-4 flex items-center gap-1 text-xs font-body text-forest/30 group-hover:text-terra/60 transition-colors">
+                    Learn more <ArrowRight size={11} className="group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── LOCATION ────────────────────────────────────────────── */}
+      <div className="border-t border-forest/[0.07]">
+        <AnimatedSection>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <MapPin size={16} className="text-terra/70 flex-shrink-0" />
+                <p className="font-body text-sm text-forest/50">
+                  Based in the{" "}
+                  <span className="text-forest/80 font-medium">Houghton neighborhood</span>
+                  , Kirkland, WA — serving the greater Eastside.
+                </p>
               </div>
+              <Link
+                href="/areas/kirkland-dog-boarding"
+                className="group flex items-center gap-1.5 text-sm font-body text-forest/40 hover:text-terra transition-colors flex-shrink-0"
+              >
+                Kirkland service area
+                <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+              </Link>
             </div>
           </div>
         </AnimatedSection>

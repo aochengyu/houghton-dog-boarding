@@ -44,7 +44,7 @@ export function Header() {
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-6">
             {[
-              { href: "/services/dog-boarding", label: "Services" },
+              { href: "/services", label: "Services" },
               { href: "/faq", label: "FAQ" },
               { href: "/contact", label: "Contact" },
             ].map((link) => (
@@ -98,7 +98,7 @@ export function Header() {
           }`}
         >
           <nav className="pb-4 border-t border-forest/10 mt-1 pt-4 flex flex-col gap-3">
-            <Link href="/services/dog-boarding" className="text-sm font-body text-forest py-1 hover:text-terra transition-colors" onClick={() => setOpen(false)}>Services</Link>
+            <Link href="/services" className="text-sm font-body text-forest py-1 hover:text-terra transition-colors" onClick={() => setOpen(false)}>Services</Link>
             <Link href="/faq" className="text-sm font-body text-forest py-1 hover:text-terra transition-colors" onClick={() => setOpen(false)}>FAQ</Link>
             <Link href="/contact" className="text-sm font-body text-forest py-1 hover:text-terra transition-colors" onClick={() => setOpen(false)}>Contact</Link>
             <a href={`tel:${content.business.phone}`} className="flex items-center gap-2 text-sm font-body text-terra py-1">
