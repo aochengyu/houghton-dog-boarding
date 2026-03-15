@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CTAButton } from "@/components/CTAButton";
 
 export const metadata: Metadata = {
-  title: "Design System | Paws and Petals",
+  title: "Design System",
   description: "Color tokens, typography scale, and component library.",
   robots: "noindex",
 };
@@ -78,9 +78,9 @@ export default function DesignSystemPage() {
                 <Swatch bg="#aed1bc" label="200" hex="#aed1bc" />
                 <Swatch bg="#7db49a" label="300" hex="#7db49a" />
                 <Swatch bg="#2d6e55" label="500" hex="#2d6e55" />
-                <Swatch bg="#1a3a2a" label="DEFAULT ★" hex="#1a3a2a" />
+                <Swatch bg="#154D54" label="DEFAULT ★" hex="#154D54" />
                 <Swatch bg="#1f5240" label="600" hex="#1f5240" />
-                <Swatch bg="#1a3a2d" label="700" hex="#1a3a2d" />
+                <Swatch bg="#154D54" label="700" hex="#154D54" />
                 <Swatch bg="#111e17" label="footer" hex="#111e17" />
               </div>
             </div>
@@ -97,11 +97,11 @@ export default function DesignSystemPage() {
                 </div>
               </div>
               <div>
-                <p className="font-body text-xs font-bold uppercase tracking-widest text-forest/40 mb-3">Terra (CTA / accent)</p>
+                <p className="font-body text-xs font-bold uppercase tracking-widest text-forest/40 mb-3">Terra / Rose (CTA / accent)</p>
                 <div className="grid grid-cols-3 gap-3">
-                  <Swatch bg="#e8896a" label="light" hex="#e8896a" />
-                  <Swatch bg="#c4693a" label="DEFAULT ★" hex="#c4693a" />
-                  <Swatch bg="#9e4f26" label="dark" hex="#9e4f26" />
+                  <Swatch bg="#d4b0b0" label="light" hex="#d4b0b0" ring />
+                  <Swatch bg="#C09292" label="DEFAULT ★" hex="#C09292" ring />
+                  <Swatch bg="#9a6e6e" label="dark" hex="#9a6e6e" />
                 </div>
               </div>
               <div>
@@ -146,17 +146,17 @@ export default function DesignSystemPage() {
                 <p className="text-center font-body text-[10px] uppercase tracking-widest text-forest/40 py-2">On cream bg</p>
               </div>
               <div className="rounded-xl bg-cream-200 p-5 border border-forest/5">
-                <TokenRow name="text-forest" value="100% — headings" preview="#1a3a2a" />
-                <TokenRow name="text-forest/70" value="70% — body paragraphs" preview="rgba(26,58,42,0.70)" />
-                <TokenRow name="text-forest/50" value="50% — secondary copy" preview="rgba(26,58,42,0.50)" />
-                <TokenRow name="text-forest/40" value="40% — meta, labels" preview="rgba(26,58,42,0.40)" />
-                <TokenRow name="text-forest/25" value="25% — captions, faint" preview="rgba(26,58,42,0.25)" />
+                <TokenRow name="text-forest" value="100% — headings" preview="#154D54" />
+                <TokenRow name="text-forest/70" value="70% — body paragraphs" preview="rgba(21,77,84,0.70)" />
+                <TokenRow name="text-forest/50" value="50% — secondary copy" preview="rgba(21,77,84,0.50)" />
+                <TokenRow name="text-forest/40" value="40% — meta, labels" preview="rgba(21,77,84,0.40)" />
+                <TokenRow name="text-forest/25" value="25% — captions, faint" preview="rgba(21,77,84,0.25)" />
                 <div className="pt-4 pb-1">
                   <p className="font-body text-[10px] text-forest/30 uppercase tracking-widest mb-1">Borders</p>
                 </div>
-                <TokenRow name="border-forest/5" value="hairline — card borders" preview="rgba(26,58,42,0.05)" />
-                <TokenRow name="border-forest/10" value="light — panel borders" preview="rgba(26,58,42,0.10)" />
-                <TokenRow name="border-forest/20" value="medium — dividers" preview="rgba(26,58,42,0.20)" />
+                <TokenRow name="border-forest/5" value="hairline — card borders" preview="rgba(21,77,84,0.05)" />
+                <TokenRow name="border-forest/10" value="light — panel borders" preview="rgba(21,77,84,0.10)" />
+                <TokenRow name="border-forest/20" value="medium — dividers" preview="rgba(21,77,84,0.20)" />
               </div>
             </div>
 

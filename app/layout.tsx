@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { localBusinessSchema } from "@/lib/schema";
 import { content } from "@/content";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: {
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
     template: `%s | ${content.business.name}`,
   },
   description:
-    "Home-based dog boarding in Houghton/Kirkland, WA. $70/night. Small capacity, fenced yard, daily photos. No kennels — just a real home.",
+    "Home-based pet boarding in Houghton/Kirkland, WA. $70/night. Cage-free, real home environment, fenced yard, daily photos.",
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
@@ -28,16 +27,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}
-        />
-      </head>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

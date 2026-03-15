@@ -1,0 +1,17 @@
+#!/bin/sh
+# Runs automatically after every `git pull` / `git merge`.
+
+# If package.json or lockfile changed, reinstall deps first
+if git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep -qE "package(-lock)?\.json"; then
+  echo "📦 Dependencies changed — running npm install..."
+  npm install --registry https://registry.npmjs.org
+fi
+
+# Restart the app via PM2
+if command -v pm2 >/dev/null 2>&1 && pm2 id paws-and-petals >/dev/null 2>&1; then
+  echo "🔄 Restarting app..."
+  pm2 restart paws-and-petals
+  echo "✅ App restarted."
+else
+  echo "⚠️  PM2 not running — start it with: npm run start:pm2"
+fi

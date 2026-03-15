@@ -8,8 +8,8 @@ export const content = {
     tagline: "Where your dog feels truly at home.",
     locationShort: "Houghton neighborhood, Kirkland WA",
     serviceArea: ["Houghton (Kirkland), WA", "Kirkland, WA", "Bellevue, WA", "Redmond, WA"],
-    phone: "YOUR_GOOGLE_VOICE_NUMBER",       // e.g. "(425) 555-0100"
-    email: "YOUR_GMAIL_ADDRESS",             // e.g. hello@houghtonpetcare.com
+    phone: "7205696748",
+    email: "serenahsiang@gmail.com",
     bookingFormUrl: "YOUR_GOOGLE_FORM_URL",  // full https:// URL to your Google Form
     bookingFormEmbedSrc: "YOUR_GOOGLE_FORM_EMBED_SRC", // embed URL (ends with ?embedded=true)
     siteUrl: "https://yourdomain.com",       // your production domain
@@ -30,15 +30,26 @@ export const content = {
     secondary: "Learn More",
   },
 
+  referral: {
+    headline: "Love Paws and Petals? Share the love.",
+    body: "Refer a friend and when they complete their first stay, you both get $20 off your next booking. No limits — refer as many friends as you like.",
+    howItWorks: [
+      "Tell a friend about us and have them mention your name when they book.",
+      "Once their first stay is complete, we'll apply $20 credit to both accounts.",
+      "Use your credit on any future service — boarding, day care, or walks.",
+    ],
+    badge: "$20 off for you · $20 off for them",
+  },
+
   home: {
-    heroHeadline: "A Real Home. Not a Kennel.",
+    heroHeadline: "Your dog, truly at home.",
     heroSubheadline:
-      "Your dog stays with us — in our home in the Houghton neighborhood of Kirkland, on the couch, in the yard — while you travel with total peace of mind.",
+      "Your dog stays with us — in our home in the Houghton neighborhood of Kirkland, in the yard, in their cozy bed — while you travel with total peace of mind.",
     bullets: [
       {
         icon: "Home",
-        title: "Home-Based, Not a Kennel",
-        body: "Your dog lives in our home, not a cage. Limited to 1–2 guests at a time so every pup gets real attention.",
+        title: "A Real Home Environment",
+        body: "Your pet lives in our home with us — free to roam, rest, and play. We hand-select every guest so each one gets genuine, unhurried attention.",
       },
       {
         icon: "Shield",
@@ -74,20 +85,20 @@ export const content = {
     ],
     finalCtaHeadline: "Ready to Book Your Dog's Next Stay?",
     finalCtaBody:
-      "Spots are limited — we keep it small so every dog gets the attention they deserve. Reach out today to check availability.",
+      "We're selective about who we accept — so every dog gets the attention they deserve. Reach out today to check availability.",
   },
 
   services: {
     dogBoarding: {
       title: "Home Dog Boarding",
       shortDesc:
-        "Overnight dog boarding in a real Houghton home. No cages, no kennels — just warm laps, a fenced yard, and plenty of love.",
+        "Overnight dog boarding in a real Houghton home. A warm, settled environment with a fully fenced yard — your dog is treated like a valued guest.",
       priceLine: "$70 / night (introductory rate)",
       icon: "Home",
       included: [
         "All meals (you provide food to keep their diet consistent)",
         "Multiple outdoor play sessions per day in our fully fenced yard",
-        "Sleeping on the couch or dog bed — your call",
+        "Their own cozy dog bed and personal space",
         "Daily photo/text updates to you",
         "Basic medication administration (pills)",
         "Lots of cuddles",
@@ -104,7 +115,7 @@ export const content = {
         "Dogs who love people and indoor life",
         "Small to medium breeds",
         "Senior dogs who need a calm environment",
-        "Dogs with mild anxiety who do better in a home than a kennel",
+        "Dogs with mild anxiety who do better in a calm home setting",
       ],
       notIdeal: [
         "Dogs with bite history",
@@ -138,7 +149,7 @@ export const content = {
       title: "Dog Walking",
       shortDesc:
         "30-minute leashed walks in the Houghton neighborhood. Perfect for keeping your dog active and mentally stimulated on busy days.",
-      priceLine: "$25 / walk",
+      priceLine: "$30 / walk",
       icon: "Footprints",
       included: [
         "30-minute leashed neighborhood walk",
@@ -153,11 +164,33 @@ export const content = {
         "Service area: Houghton neighborhood, Kirkland",
       ],
     },
+    dayCare: {
+      title: "Dog & Cat Day Care",
+      shortDesc:
+        "A full day of supervised care in our home. Drop off in the morning, pick up in the evening — no overnight stay required.",
+      priceLine: "$60 / day",
+      icon: "Sun",
+      included: [
+        "Full-day supervised care (drop-off by 9 am, pick-up by 6 pm)",
+        "Outdoor play sessions in our fully fenced yard",
+        "All meals (you provide food to keep their diet consistent)",
+        "Their own cozy resting space",
+        "Midday photo/text update to you",
+        "Basic medication administration (pills)",
+      ],
+      requirements: [
+        "Up-to-date Rabies vaccination (required)",
+        "Up-to-date DHPP / DA2PP or FVRCP vaccination (required)",
+        "Bordetella recommended for dogs",
+        "Pet must be friendly and non-reactive",
+        "No history of aggression",
+      ],
+    },
     dropIn: {
-      title: "Dog Drop-In Visit",
+      title: "Drop-In Visit",
       shortDesc:
         "We come to your home to feed, play, and check on your dog. Great for dogs who are happiest in their own space.",
-      priceLine: "$20 / visit",
+      priceLine: "$30 / visit",
       icon: "Clock",
       included: [
         "30-minute visit at your home",
@@ -175,27 +208,50 @@ export const content = {
     },
   },
 
+  packages: [
+    {
+      title: "Weekly Stay",
+      tagline: "Extended boarding, better rate",
+      description: "7 consecutive nights of boarding. Best for longer trips — lock in a week and save.",
+      price: "$450",
+      originalPrice: "$490",
+      savings: "Save $40",
+      icon: "CalendarDays",
+      highlight: true,
+    },
+    {
+      title: "Walk Pack",
+      tagline: "5 walks, one bundle",
+      description: "Pre-pay for 5 walks and save. Use them any time within 30 days of purchase.",
+      price: "$135",
+      originalPrice: "$150",
+      savings: "Save $15",
+      icon: "Footprints",
+      highlight: false,
+    },
+  ],
+
   areas: {
     houghton: {
-      pageTitle: "Houghton Dog Boarding | Paws and Petals",
+      pageTitle: "Houghton Dog Boarding",
       metaDescription:
-        "In-home dog boarding in the Houghton neighborhood of Kirkland, WA. $70/night. Small capacity, fenced yard, daily updates, vaccine-required.",
+        "In-home dog boarding in the Houghton neighborhood of Kirkland, WA. $70/night. Selective availability, fenced yard, daily updates, vaccine-required.",
       h1: "Dog Boarding in Houghton, Kirkland WA",
       body: [
         "Looking for dog boarding in the Houghton neighborhood? We're your neighbors. Houghton is a quiet residential area within Kirkland, just minutes from Lake Washington — and it's exactly the kind of calm, home setting dogs thrive in.",
-        "Unlike large boarding facilities, we accept only 1–2 dogs at a time. That means your dog gets real one-on-one attention: morning walks, backyard play sessions, and evenings curled up on the couch — not in a kennel run.",
+        "Unlike large boarding facilities, we keep our guest list intentionally small and selective. That means your dog gets real personal attention: morning walks, backyard play sessions, and evenings settled in their own cozy bed.",
         "We require current vaccinations (Rabies + DHPP required, Bordetella recommended) and a brief meet-and-greet before any first stay. This keeps our home safe for every pup.",
         "Prices start at $70 per night. We'll confirm availability and share our exact address after booking is confirmed.",
       ],
     },
     kirkland: {
-      pageTitle: "Kirkland Dog Boarding | Paws and Petals",
+      pageTitle: "Kirkland Dog Boarding",
       metaDescription:
-        "Home dog boarding serving Kirkland, WA. $70/night, limited spots, fenced yard. Vaccine-required, daily photos. Book now.",
+        "Home dog boarding serving Kirkland, WA. $70/night, selective availability, fenced yard. Vaccine-required, daily photos. Book now.",
       h1: "Dog Boarding in Kirkland, WA",
       body: [
         "Searching for dog boarding in Kirkland? We're located right in the Houghton neighborhood — one of Kirkland's most peaceful residential areas — and we offer the kind of personal, home-based care that big boarding facilities simply can't match.",
-        "Kirkland dog owners love us for our small size: we limit stays to 1–2 dogs at a time, so your pup is never lost in a crowd. They play in our fully fenced backyard, nap on the couch, and wake up to a calm morning routine.",
+        "Kirkland dog owners love us for our selectivity: we hand-pick our guests for a great temperament fit, so your pup is never lost in a crowd. They play in our fully fenced backyard, settle into their own cozy bed, and wake up to a calm morning routine.",
         "We send daily photo updates so you can keep tabs on your best friend from wherever you are. No news is good news — but we know you'll want the photos anyway.",
         "Our introductory rate is $70 per night. Current vaccinations (Rabies + DHPP) are required for all stays. We're happy to answer any questions before you book.",
       ],
@@ -203,11 +259,11 @@ export const content = {
   },
 
   booking: {
-    pageTitle: "Request a Booking | Paws and Petals",
+    pageTitle: "Request a Booking",
     metaDescription: "Request a dog boarding stay in Houghton/Kirkland, WA. $70/night. Review our waiver and submit your booking request.",
     h1: "Request a Boarding Stay",
     intro: [
-      "We keep a small roster on purpose — so every dog gets real attention. Here's how booking works:",
+      "We're selective about every booking — so every dog in our care gets the attention they deserve. Here's how it works:",
     ],
     stepsTitle: "How It Works",
     steps: [
@@ -228,7 +284,7 @@ export const content = {
   },
 
   faq: {
-    pageTitle: "FAQ | Paws and Petals",
+    pageTitle: "FAQ",
     metaDescription: "Frequently asked questions about our Houghton/Kirkland dog boarding service. Vaccines, rates, policies, and more.",
     h1: "Frequently Asked Questions",
     items: [
@@ -238,7 +294,7 @@ export const content = {
       },
       {
         q: "How many dogs do you board at once?",
-        a: "We keep it to 1–2 dogs at a time. Keeping it small is the whole point — your dog deserves real attention, not just a spot in a crowd.",
+        a: "We keep our guest list intentionally small and hand-selected. Keeping it selective is the whole point — your dog deserves real attention, not just a spot in a crowd. Not every booking request is accepted.",
       },
       {
         q: "What's your rate, and are there holiday surcharges?",
@@ -250,7 +306,7 @@ export const content = {
       },
       {
         q: "Will my dog be in a crate?",
-        a: "Only if you want them to be. If your dog is crate-trained and you prefer they sleep in it, bring their crate. Otherwise, they're welcome on the couch or dog bed. We don't cage dogs — that's kind of the whole point.",
+        a: "Only if you want them to be. If your dog is crate-trained and you prefer they sleep in it, bring their crate. Otherwise, they'll have their own cozy dog bed and personal space. Pets are not permitted on furniture.",
       },
       {
         q: "Can you administer medication?",
@@ -264,12 +320,20 @@ export const content = {
         q: "What's your cancellation policy?",
         a: "Please review our full Cancellation Policy before booking. In short: cancellations more than 7 days before the stay receive a full refund; cancellations within 7 days may forfeit a portion of payment depending on timing.",
       },
+      {
+        q: "Do you offer package deals?",
+        a: "Yes! We offer a Weekly Stay package (7 nights for $450, save $40) and a Walk Pack (5 walks for $135, valid 30 days). Ask us about packages when you inquire.",
+      },
+      {
+        q: "Do you have a referral program?",
+        a: "Yes! Refer a friend and when they complete their first stay, you both get $20 off your next booking. Just have your friend mention your name when they book. There's no limit — refer as many friends as you like.",
+      },
     ],
   },
 
   legal: {
     cancellation: {
-      pageTitle: "Cancellation Policy | Paws and Petals",
+      pageTitle: "Cancellation Policy",
       h1: "Cancellation Policy",
       bullets: [
         "Cancellations made 7+ days before the scheduled start date: full refund.",
@@ -280,10 +344,10 @@ export const content = {
         "Holiday and peak-date reservations may have stricter terms — we'll note this clearly at time of booking.",
         "We reserve the right to cancel any booking if a dog is found to be a safety risk. A full refund will be issued in that case.",
       ],
-      note: "To cancel or modify a reservation, please contact us by phone or email as early as possible. We're reasonable people — if something unexpected happens, reach out and we'll do our best to work with you.",
+      note: "To cancel or modify a reservation, please contact us by text or email as early as possible. We're reasonable people — if something unexpected happens, reach out and we'll do our best to work with you.",
     },
     waiver: {
-      pageTitle: "Liability Waiver | Paws and Petals",
+      pageTitle: "Liability Waiver",
       h1: "Liability Waiver",
       paragraphs: [
         "By submitting a booking request and using our services, you (the dog owner / \"Client\") agree to the following terms.",
@@ -293,14 +357,15 @@ export const content = {
         "Limitation of Liability: Paws and Petals shall not be held liable for injury, illness, or death of the pet except in cases of gross negligence or willful misconduct.",
         "Indemnification: Client agrees to indemnify and hold harmless Paws and Petals from any claims, damages, or expenses arising from the pet's behavior during the stay, including injury to persons or property.",
         "Vaccination Compliance: Client confirms that the pet meets all vaccination requirements (current Rabies and DHPP). Failure to provide current records may result in cancellation of the stay without refund.",
+        "House Rules: Pets are not permitted on furniture at any time during their stay. Clients are responsible for informing us of any habits or behaviors that may conflict with this policy.",
       ],
       note: "This is a simplified MVP waiver for a small home-based boarding service. It is not a substitute for legal advice. Consult an attorney to ensure this document meets your jurisdiction's requirements before relying on it commercially.",
     },
   },
 
   contact: {
-    pageTitle: "Contact Us | Paws and Petals",
-    metaDescription: "Get in touch with Paws and Petals. Call, text, or email us.",
+    pageTitle: "Contact Us",
+    metaDescription: "Get in touch with Paws and Petals. Text or email us.",
     h1: "Get in Touch",
     intro:
       "The best way to reach us is by text or email. We typically respond within a few hours during the day.",

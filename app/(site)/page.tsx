@@ -7,16 +7,16 @@ import { PawPrint } from "@/components/PawPrint";
 import { Star, ArrowRight, Check, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: content.business.name,
+  title: { absolute: content.business.name },
   description:
-    "Home-based dog boarding in Houghton/Kirkland, WA. $70/night. Real home, fenced yard, limited to 1–2 dogs.",
+    "Home-based dog boarding in Houghton/Kirkland, WA. $70/night. Real home, fenced yard, selective availability.",
 };
 
 const marqueeItems = [
   "Fully fenced yard",
-  "No kennels · ever",
+  "Cage-free · always",
   "$70 per night",
-  "1–2 dogs maximum",
+  "Selective availability",
   "Daily photo updates",
   "Kirkland, WA",
   "Response < 24 hours",
@@ -60,10 +60,9 @@ export default function HomePage() {
                 className="font-display font-bold text-cream leading-[0.9] opacity-0 animate-fade-up [animation-delay:70ms] [animation-fill-mode:forwards]"
                 style={{ fontSize: "clamp(3.25rem, 7.5vw, 6.75rem)" }}
               >
-                A Real<br />
-                <em className="not-italic text-cream/50 font-medium">Home.</em><br />
-                Not a<br />
-                Kennel.
+                Your dog,<br />
+                <em className="not-italic text-cream/50 font-medium italic">truly</em><br />
+                at home.
               </h1>
 
               {/* Paw divider */}
@@ -74,7 +73,7 @@ export default function HomePage() {
               </div>
 
               {/* Subheadline */}
-              <p className="font-body text-sm lg:text-base text-cream/40 leading-relaxed max-w-[340px] opacity-0 animate-fade-up [animation-delay:200ms] [animation-fill-mode:forwards]">
+              <p className="font-body text-sm lg:text-base text-cream/65 leading-relaxed max-w-[340px] opacity-0 animate-fade-up [animation-delay:200ms] [animation-fill-mode:forwards]">
                 {content.home.heroSubheadline}
               </p>
 
@@ -83,7 +82,7 @@ export default function HomePage() {
                 <CTAButton href="/booking" label={content.ctas.primary} size="lg" />
                 <Link
                   href="/services/dog-boarding"
-                  className="group flex items-center gap-1.5 text-sm font-body text-cream/35 hover:text-cream/65 transition-colors duration-200"
+                  className="group flex items-center gap-1.5 text-sm font-body text-cream/55 hover:text-cream/80 transition-colors duration-200"
                 >
                   How it works
                   <ArrowRight
@@ -100,7 +99,7 @@ export default function HomePage() {
                     <Star key={i} size={12} fill="currentColor" className="text-gold" />
                   ))}
                 </div>
-                <span className="text-[11px] font-body text-cream/25 ml-1">
+                <span className="text-[11px] font-body text-cream/45 ml-1">
                   Trusted by Eastside families
                 </span>
               </div>
@@ -115,7 +114,7 @@ export default function HomePage() {
 
               {/* Price display */}
               <div className="relative z-10">
-                <p className="font-body text-[10px] uppercase tracking-[0.3em] text-white/35 mb-4">
+                <p className="font-body text-[10px] uppercase tracking-[0.3em] text-white/55 mb-4">
                   Introductory rate
                 </p>
                 <div className="flex items-start leading-none">
@@ -127,7 +126,7 @@ export default function HomePage() {
                     70
                   </span>
                 </div>
-                <p className="font-body text-[10px] uppercase tracking-[0.25em] text-white/30 mt-2">
+                <p className="font-body text-[10px] uppercase tracking-[0.25em] text-white/55 mt-2">
                   per night
                 </p>
               </div>
@@ -136,22 +135,22 @@ export default function HomePage() {
               <div className="relative z-10 mt-8 space-y-4">
                 {[
                   "Fully fenced yard",
-                  "1–2 dogs max",
+                  "Hand-selected guests",
                   "Daily photo updates",
-                  "No kennels, ever",
+                  "Cage-free, always",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <div className="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0">
                       <Check size={10} className="text-white/75" strokeWidth={2.5} />
                     </div>
-                    <span className="font-body text-sm text-white/60">{item}</span>
+                    <span className="font-body text-sm text-white/75">{item}</span>
                   </div>
                 ))}
               </div>
 
               {/* Fine print */}
               <div className="relative z-10 mt-10 pt-7 border-t border-white/10">
-                <p className="font-body text-[11px] text-white/20 leading-relaxed">
+                <p className="font-body text-[11px] text-white/45 leading-relaxed">
                   Address shared after confirmation.<br />
                   Meet-and-greet required for first stays.
                 </p>
@@ -168,7 +167,7 @@ export default function HomePage() {
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
             <span
               key={i}
-              className="inline-flex items-center gap-4 px-7 font-body text-[10px] uppercase tracking-[0.25em] text-cream/30"
+              className="inline-flex items-center gap-4 px-7 font-body text-[10px] uppercase tracking-[0.25em] text-cream/55"
             >
               {item}
               <PawPrint size={9} className="text-rose/70 flex-shrink-0" />
@@ -192,7 +191,7 @@ export default function HomePage() {
                 style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)" }}
               >
                 Small by design.{" "}
-                <span className="italic font-medium text-forest/35">Big on care.</span>
+                <span className="italic font-medium text-forest/55">Big on care.</span>
               </h2>
             </div>
           </AnimatedSection>
@@ -224,7 +223,7 @@ export default function HomePage() {
                     <h3 className="font-display text-xl lg:text-2xl font-bold text-forest mb-3 leading-snug">
                       {b.title}
                     </h3>
-                    <p className="font-body text-sm text-forest/50 leading-relaxed">
+                    <p className="font-body text-sm text-forest/70 leading-relaxed">
                       {b.body}
                     </p>
                   </div>
@@ -290,10 +289,10 @@ export default function HomePage() {
                 </div>
                 <div className="w-px h-4 bg-cream/10" />
                 <div>
-                  <p className="font-body text-sm font-semibold text-cream/65">
+                  <p className="font-body text-sm font-semibold text-cream/85">
                     {content.home.reviews[0].author}
                   </p>
-                  <p className="font-body text-xs text-cream/30">
+                  <p className="font-body text-xs text-cream/55">
                     {content.home.reviews[0].location}
                   </p>
                 </div>
@@ -311,10 +310,10 @@ export default function HomePage() {
                       <Star key={idx} size={11} fill="currentColor" className="text-gold" />
                     ))}
                   </div>
-                  <p className="font-body text-sm text-cream/50 leading-relaxed italic mb-5">
+                  <p className="font-body text-sm text-cream/70 leading-relaxed italic mb-5">
                     &ldquo;{r.quote}&rdquo;
                   </p>
-                  <p className="font-body text-xs text-cream/30 font-medium tracking-wide uppercase">
+                  <p className="font-body text-xs text-cream/55 font-medium tracking-wide uppercase">
                     {r.author} · {r.location}
                   </p>
                 </div>
@@ -340,16 +339,16 @@ export default function HomePage() {
                 style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)" }}
               >
                 One rate.{" "}
-                <em className="not-italic italic font-medium text-forest/35">No surprises.</em>
+                <em className="not-italic italic font-medium text-forest/55">No surprises.</em>
               </h2>
               <div className="mt-6 w-10 h-px bg-terra" />
-              <p className="mt-6 font-body text-sm text-forest/50 leading-relaxed max-w-sm">
+              <p className="mt-6 font-body text-sm text-forest/70 leading-relaxed max-w-sm">
                 $70/night, locked in for returning clients. No upsells, no extras — just honest,
                 attentive home care.
               </p>
               <ul className="mt-8 space-y-3">
                 {content.pricing.notes.map((n) => (
-                  <li key={n} className="flex items-start gap-3 text-sm font-body text-forest/40">
+                  <li key={n} className="flex items-start gap-3 text-sm font-body text-forest/65">
                     <span className="text-terra mt-0.5 flex-shrink-0">—</span>
                     {n}
                   </li>
@@ -368,11 +367,11 @@ export default function HomePage() {
                   <PawPrint size={210} className="text-cream" />
                 </div>
 
-                <p className="font-body text-[10px] uppercase tracking-[0.3em] text-cream/20 mb-5 relative z-10">
+                <p className="font-body text-[10px] uppercase tracking-[0.3em] text-cream/45 mb-5 relative z-10">
                   Per night
                 </p>
                 <div className="flex items-start leading-none relative z-10">
-                  <span className="font-display text-xl font-bold text-cream/35 mt-3 mr-1.5">$</span>
+                  <span className="font-display text-xl font-bold text-cream/55 mt-3 mr-1.5">$</span>
                   <span
                     className="font-display font-bold text-cream leading-none"
                     style={{ fontSize: "clamp(4rem, 10vw, 7rem)" }}
@@ -383,16 +382,16 @@ export default function HomePage() {
 
                 <div className="mt-10 pt-8 border-t border-cream/[0.08] grid grid-cols-2 gap-6 relative z-10">
                   {[
-                    { label: "Capacity", val: "1–2 dogs" },
+                    { label: "Availability", val: "Selective" },
                     { label: "Response", val: "< 24 hrs" },
                     { label: "Address", val: "On confirm" },
                     { label: "Meet & greet", val: "Required" },
                   ].map((item) => (
                     <div key={item.label}>
-                      <p className="font-body text-[10px] uppercase tracking-widest text-cream/20 mb-1">
+                      <p className="font-body text-[10px] uppercase tracking-widest text-cream/45 mb-1">
                         {item.label}
                       </p>
-                      <p className="font-body text-sm text-cream/60 font-medium">{item.val}</p>
+                      <p className="font-body text-sm text-cream/80 font-medium">{item.val}</p>
                     </div>
                   ))}
                 </div>
@@ -416,7 +415,7 @@ export default function HomePage() {
                   className="font-display font-bold text-forest leading-[1.0]"
                   style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
                 >
-                  Four ways to help.
+                  Five ways to care.
                 </h2>
               </div>
               <Link
@@ -429,12 +428,12 @@ export default function HomePage() {
             </div>
           </AnimatedSection>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {[
               {
                 title: "Dog Boarding",
                 price: "$70 / night",
-                desc: "Overnight stays in our home — fenced yard, no kennels, limited to 1–2 dogs.",
+                desc: "Overnight stays in our home — fenced yard, cage-free, hand-selected guests only.",
                 href: "/services/dog-boarding",
                 accent: "terra" as const,
               },
@@ -446,15 +445,22 @@ export default function HomePage() {
                 accent: "rose" as const,
               },
               {
+                title: "Day Care",
+                price: "$60 / day",
+                desc: "Full-day supervised care in our home. Drop off mornings, pick up evenings — dogs and cats welcome.",
+                href: "/services",
+                accent: "teal" as const,
+              },
+              {
                 title: "Dog Walking",
-                price: "$25 / walk",
+                price: "$30 / walk",
                 desc: "30-minute leashed walks through the Houghton neighborhood.",
                 href: "/services",
                 accent: "teal" as const,
               },
               {
                 title: "Drop-In Visit",
-                price: "$20 / visit",
+                price: "$30 / visit",
                 desc: "We come to your home — feed, play, and check on your dog for 30 minutes.",
                 href: "/services",
                 accent: "teal" as const,
@@ -483,8 +489,8 @@ export default function HomePage() {
                   <p className={`font-body text-sm font-semibold mb-3 ${
                     svc.accent === "rose" ? "text-rose" : svc.accent === "teal" ? "text-teal" : "text-terra"
                   }`}>{svc.price}</p>
-                  <p className="font-body text-xs text-forest/45 leading-relaxed flex-1">{svc.desc}</p>
-                  <div className={`mt-4 flex items-center gap-1 text-xs font-body text-forest/30 transition-colors ${
+                  <p className="font-body text-xs text-forest/65 leading-relaxed flex-1">{svc.desc}</p>
+                  <div className={`mt-4 flex items-center gap-1 text-xs font-body text-forest/50 transition-colors ${
                     svc.accent === "rose"
                       ? "group-hover:text-rose/60"
                       : svc.accent === "teal"
@@ -492,6 +498,7 @@ export default function HomePage() {
                       : "group-hover:text-terra/60"
                   }`}>
                     Learn more <ArrowRight size={11} className="group-hover:translate-x-0.5 transition-transform" />
+
                   </div>
                 </Link>
               </AnimatedSection>
@@ -507,7 +514,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <MapPin size={16} className="text-terra/70 flex-shrink-0" />
-                <p className="font-body text-sm text-forest/50">
+                <p className="font-body text-sm text-forest/70">
                   Based in the{" "}
                   <span className="text-forest/80 font-medium">Houghton neighborhood</span>
                   , Kirkland, WA — serving the greater Eastside.
@@ -524,6 +531,44 @@ export default function HomePage() {
           </div>
         </AnimatedSection>
       </div>
+
+      {/* ── REFERRAL ────────────────────────────────────────────── */}
+      <section className="py-20 lg:py-28 bg-cream-200 border-t border-forest/[0.07]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="max-w-2xl mx-auto text-center">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-teal/10 border border-teal/20 rounded-full px-4 py-1.5 mb-6">
+                <span className="font-body text-[10px] font-bold uppercase tracking-widest text-teal">
+                  {content.referral.badge}
+                </span>
+              </div>
+
+              <h2
+                className="font-display font-bold text-forest leading-[1.05] mb-4"
+                style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)" }}
+              >
+                {content.referral.headline}
+              </h2>
+              <p className="font-body text-sm text-forest/65 leading-relaxed max-w-xl mx-auto mb-10">
+                {content.referral.body}
+              </p>
+
+              {/* Steps */}
+              <div className="grid sm:grid-cols-3 gap-6 text-left">
+                {content.referral.howItWorks.map((step, i) => (
+                  <div key={i} className="bg-white rounded-2xl border border-forest/[0.07] p-5">
+                    <span className="font-display text-4xl font-bold text-teal/20 leading-none block mb-3">
+                      0{i + 1}
+                    </span>
+                    <p className="font-body text-sm text-forest/70 leading-relaxed">{step}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
 
       {/* ── FINAL CTA ───────────────────────────────────────────── */}
       <section className="py-24 lg:py-36 bg-terra relative overflow-hidden">
@@ -547,7 +592,7 @@ export default function HomePage() {
               >
                 {content.home.finalCtaHeadline}
               </h2>
-              <p className="mt-5 font-body text-base text-white/50 max-w-xl leading-relaxed">
+              <p className="mt-5 font-body text-base text-white/70 max-w-xl leading-relaxed">
                 {content.home.finalCtaBody}
               </p>
             </AnimatedSection>

@@ -8,9 +8,9 @@
   /* ── Brand primitives ─────────────────────────────────────── */
   --font-display: 'Playfair Display';
   --font-body: 'DM Sans';
-  --color-forest: #1a3a2a;
+  --color-forest: #154D54;
   --color-cream:  #faf6f0;
-  --color-terra:  #c4693a;
+  --color-terra:  #C09292;
   --color-gold:   #d4a853;
   --color-teal:   #154D54;
   --color-rose:   #C09292;
@@ -29,10 +29,10 @@
 
   /* Text on cream/light surfaces (use text-forest + opacity) */
   --text-primary:    var(--color-forest);           /* 100% — headings */
-  --text-body:       rgba(26, 58, 42, 0.70);        /*  70% — paragraphs */
-  --text-secondary:  rgba(26, 58, 42, 0.50);        /*  50% — supporting copy */
-  --text-muted:      rgba(26, 58, 42, 0.40);        /*  40% — meta, labels */
-  --text-faint:      rgba(26, 58, 42, 0.25);        /*  25% — captions, placeholders */
+  --text-body:       rgba(21, 77, 84, 0.70);        /*  70% — paragraphs */
+  --text-secondary:  rgba(21, 77, 84, 0.50);        /*  50% — supporting copy */
+  --text-muted:      rgba(21, 77, 84, 0.40);        /*  40% — meta, labels */
+  --text-faint:      rgba(21, 77, 84, 0.25);        /*  25% — captions, placeholders */
 
   /* Text on forest/dark surfaces (use text-cream + opacity) */
   --text-on-dark:           var(--color-cream);     /* 100% — headings */
@@ -69,17 +69,17 @@
   --text-on-footer-faint: rgba(255,255,255,0.15);   /*  15% — service area */
 
   /* Borders */
-  --border-hairline:       rgba(26, 58, 42, 0.05);  /* cards on cream */
-  --border-light:          rgba(26, 58, 42, 0.10);  /* panels on cream */
-  --border-medium:         rgba(26, 58, 42, 0.20);  /* visible dividers */
+  --border-hairline:       rgba(21, 77, 84, 0.05);  /* cards on cream */
+  --border-light:          rgba(21, 77, 84, 0.10);  /* panels on cream */
+  --border-medium:         rgba(21, 77, 84, 0.20);  /* visible dividers */
   --border-on-dark:        rgba(250,246,240,0.10);  /* cards on forest */
   --border-on-dark-hover:  rgba(250,246,240,0.15);  /* hover state on forest */
   --border-on-footer:      rgba(255,255,255,0.05);  /* footer divider */
 
   /* Accent tints */
-  --terra-faint:  rgba(196,105,58,0.10);  /* badge bg */
-  --terra-subtle: rgba(196,105,58,0.20);  /* dividers */
-  --terra-soft:   rgba(196,105,58,0.40);  /* decorative rules */
+  --terra-faint:  rgba(192,146,146,0.10);  /* badge bg */
+  --terra-subtle: rgba(192,146,146,0.20);  /* dividers */
+  --terra-soft:   rgba(192,146,146,0.40);  /* decorative rules */
   --gold-faint:   rgba(212,168,83,0.10);  /* notice bg */
   --gold-border:  rgba(212,168,83,0.30);  /* notice border */
 }
@@ -87,7 +87,7 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #1a3a2a transparent;
+  scrollbar-color: #154D54 transparent;
 }
 
 body {
@@ -99,7 +99,7 @@ body {
 
 /* Selection style */
 ::selection {
-  background: #c4693a;
+  background: #C09292;
   color: white;
 }
 
@@ -139,6 +139,77 @@ body::before {
 /* ============================================================
    Animation keyframes
    ============================================================ */
+
+/* ── Paw loader ────────────────────────────────────────────── */
+
+/* Single paw bounce — for inline/button use */
+@keyframes paw-bounce {
+  0%, 100% { transform: translateY(0) scale(1);    opacity: 0.9; }
+  30%       { transform: translateY(-4px) scale(1.15); opacity: 1; }
+  60%       { transform: translateY(1px) scale(0.95);  opacity: 0.8; }
+}
+
+/* Sequential stamp — each paw stamping down, holding, fading */
+@keyframes paw-stamp {
+  0%   { opacity: 0;   transform: scale(0.25) translateY(-6px) rotate(var(--paw-rot, 0deg)); }
+  18%  { opacity: 1;   transform: scale(1.12) translateY(0)     rotate(0deg); }
+  35%  { opacity: 0.85; transform: scale(1)    translateY(0)    rotate(0deg); }
+  65%  { opacity: 0.6; transform: scale(1)    translateY(0)     rotate(0deg); }
+  100% { opacity: 0.1; transform: scale(1)    translateY(0)     rotate(0deg); }
+}
+
+/* ── Ink ripple ─────────────────────────────────────────────── */
+@keyframes ripple-out {
+  0%   { transform: scale(0) translate(-50%, -50%); opacity: 1; }
+  80%  { opacity: 0.3; }
+  100% { transform: scale(28) translate(-50%, -50%); opacity: 0; }
+}
+
+/* ── SVG path-draw (checkmark + circle) ────────────────────── */
+@keyframes draw-circle {
+  from { stroke-dashoffset: 145; }
+  to   { stroke-dashoffset: 0; }
+}
+
+@keyframes draw-check {
+  from { stroke-dashoffset: 38; }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* ── Particle burst ─────────────────────────────────────────── */
+@keyframes particle-burst {
+  0%   { transform: translate(0, 0) scale(1); opacity: 1; }
+  70%  { opacity: 0.8; }
+  100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+}
+
+/* ── Shimmer sweep (for CTA buttons) ───────────────────────── */
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-100%) skewX(-12deg); }
+  100% { transform: translateX(300%) skewX(-12deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60%  { transform: translateX(-5px); }
+  40%, 80%  { transform: translateX(5px); }
+}
+
+@keyframes fade-slide-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce-in {
+  0%   { transform: scale(0.8); opacity: 0; }
+  60%  { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
 
 @keyframes fadeUp {
   from {
@@ -236,7 +307,7 @@ body::before {
 }
 
 .label-accent {
-  background: linear-gradient(90deg, #c4693a 0%, #d4a853 50%, #c4693a 100%);
+  background: linear-gradient(90deg, #C09292 0%, #d4a853 50%, #C09292 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -251,6 +322,28 @@ body::before {
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-in {
+  0%   { opacity: 0; transform: scale(0.85); }
+  60%  { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pay-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(26, 58, 42, 0.25); }
+  50%       { box-shadow: 0 0 0 8px rgba(26, 58, 42, 0); }
 }
 
 .animate-marquee {
@@ -333,4 +426,49 @@ body::before {
   border-radius: 1rem;
   padding: 2.5rem;
   overflow: hidden;
+}
+
+/* ============================================================
+   Shimmer button — diagonal shine sweep on hover
+   Apply .btn-shimmer to any <button> or <a> with overflow:hidden
+   ============================================================ */
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 100%
+  );
+  transform: translateX(-150%) skewX(-12deg);
+  pointer-events: none;
+}
+
+.btn-shimmer:hover::after {
+  animation: shimmer-sweep 0.55s ease forwards;
+}
+
+/* ============================================================
+   Focus ring with draw-in personality
+   ============================================================ */
+
+.fancy-focus:focus-visible {
+  outline: none;
+  animation: focus-draw 0.25s ease forwards;
+}
+
+@keyframes focus-draw {
+  from { box-shadow: 0 0 0 0 rgba(21, 77, 84, 0.5); }
+  to   { box-shadow: 0 0 0 3px rgba(21, 77, 84, 0.3); }
 }

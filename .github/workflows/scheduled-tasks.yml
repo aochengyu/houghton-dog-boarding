@@ -1,0 +1,24 @@
+name: Scheduled Tasks
+
+on:
+  schedule:
+    # Run daily at 10:00 AM UTC (3am PT / 6am ET)
+    - cron: "0 10 * * *"
+  # Allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
+
+jobs:
+  daily-tasks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run daily cron tasks (reminders + Supabase keep-alive)
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X POST "${{ secrets.SITE_URL }}/api/cron/tasks" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json")
+          echo "Response: $response"
+          if [ "$response" != "200" ]; then
+            echo "Cron task failed with status $response"
+            exit 1
+          fi

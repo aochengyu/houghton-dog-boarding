@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 534 800">
+  <rect width="534" height="800" fill="#f5ece0"/>
+  <rect width="534" height="800" fill="url(#dots5)" opacity="0.07"/>
+  <defs>
+    <pattern id="dots5" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#154D54"/>
+    </pattern>
+  </defs>
+  <ellipse cx="267" cy="460" rx="72" ry="55" fill="#C09292" opacity="0.3"/>
+  <circle cx="187" cy="360" r="30" fill="#C09292" opacity="0.3"/>
+  <circle cx="252" cy="323" r="32" fill="#C09292" opacity="0.3"/>
+  <circle cx="282" cy="323" r="32" fill="#C09292" opacity="0.3"/>
+  <circle cx="347" cy="360" r="30" fill="#C09292" opacity="0.3"/>
+  <text x="267" y="570" font-family="Georgia,serif" font-size="13" fill="#154D54" opacity="0.3" text-anchor="middle" letter-spacing="3">YOUR PHOTO HERE</text>
+</svg>
